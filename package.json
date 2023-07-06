@@ -1,0 +1,38 @@
+{
+  "name": "player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "live": "live-server --port=8092 --browser=\"chrome\"",
+    "live:mac": "live-server --port=8092 --browser=\"google chrome\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp.spritesmith": "^6.13.0",
+    "live-server": "^1.2.2",
+    "merge-stream": "^2.0.0",
+    "node-sass": "^7.0.3",
+    "pg": "^8.7.3",
+    "swiper": "^8.3.1",
+    "videojs-flash": "^2.2.1",
+    "vinyl-buffer": "^1.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "sass": "^1.54.9"
+  }
+}

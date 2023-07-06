@@ -1,0 +1,2654 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html dir="ltr"lang="ko-KR" class="ie6 lte-ie9 lte-ie8 lte-ie7 lte-ie6"><![endif]-->
+<!--[if lte IE 7]><html dir="ltr"lang="ko-KR" class="ie7 lte-ie9 lte-ie8 lte-ie7"><![endif]-->
+<!--[if IE 8]><html dir="ltr"lang="ko-KR" class="ie8 lte-ie9 lte-ie8"><![endif]-->
+<!--[if IE 9]><html dir="ltr"lang="ko-KR" class="ie9 lte-ie9"><![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html dir="ltr" lang="ko"><!--<![endif]-->
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="">
+	<meta name="author" content="jdh">
+	<meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="stylesheet" href="./resources/styles/style.css">
+
+	<script src="./resources/scripts/jquery.js"></script>
+	<script src="./resources/scripts/jquery-migrate-3.3.2.js"></script>
+	<script src="./resources/scripts/jquery.cookie.js"></script>
+	<script src="./resources/scripts/jquery.cycle.2.js"></script>
+	<script src="./resources/scripts/jquery.cycle.2.carousel.js"></script>
+	<script src="./resources/scripts/jquery.cycle.2.swipe.js"></script>
+	<script src="./resources/scripts/slick.min.js"></script>
+	<script src="./resources/scripts/site.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="./resources/scripts/html5shiv.js"></script>
+    <![endif]-->
+    <title>▦ 사이트 이름</title>
+</head>
+<body class="subpage">
+
+	<!-- 헤더 디자인 -->
+	<header id="header" class="header none-width add-all-menu down-all add-search-btn ver2 left-tit">
+		<!--
+			// title 과 gnb 일렬 정렬시 ver2 추가
+			// 전체메뉴 보기시 add-all-menu 추가
+			// 검색을 버튼으로 켤때 add-search-btn 추가
+			// 2차메뉴 전체 떨어질때  down-all 추가
+			// 유동적 메뉴사이즈 none-width 추가. menuNumbering('.gnb')는 주석처리.
+			// ver2 + 전체 떨어질때 좌측에 타이틀 삽입시 left-tit 추가
+		-->
+
+		<!--스킵 네비게이션-->
+		<article class="skiptoContent">
+			<h2 class="hidden_word">바로가기 메뉴</h2>
+			<div>
+				<strong>바로가기 메뉴</strong>
+				<span class="skip_item01"><a href="#cont-sbj" onclick="document.getElementById('cont-sbj').tabIndex = -1;document.getElementById('cont-sbj').focus();jQuery('#cont-sbj').addClass('selected');return false;">본문내용 바로가기</a></span>
+				<span class="skip_item02"><a href="#gnb" onclick="document.getElementById('gnb').tabIndex = -1;document.getElementById('gnb').focus();return false;">메인메뉴 바로가기</a></span>
+			</div>
+		</article>
+		<script>skipNavi();</script>
+		<!--스킵 네비게이션-->
+
+
+		<div class="header__links">
+			<div class="header__links__1">
+
+				<a href="#">home</a>
+				<a href="#">sitemap</a>
+
+				<span class="header__links__font-size-box font-size-box">
+					<h3>FONT SIZE</h3>
+					<a href="#" class="font-size-item" onclick="js_font_plus();" title="폰트크기 키움">
+						+
+					</a>
+					<span class="size-realtime s1">100%</span>
+					<span class="size-realtime s2">110%</span>
+					<span class="size-realtime s3">120%</span>
+					<span class="size-realtime s4">130%</span>
+					<span class="size-realtime s5">140%</span>
+					<a href="#" class="font-size-item" onclick="js_font_minus();" title="폰트크기 줄임">
+						-
+					</a>
+				</span>
+
+				<a href="#" class="header-search-btn">검색</a>
+			</div>
+		</div>
+
+
+		<article class="header__search">
+			<h2 class="hidden_word">검색</h2>
+			<div class="header__search__in">
+				<form name="searchForm" method="get" action="/" >
+					<label for="searchKeyword" class="hidden_word">검색어 입력</label>
+						<input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요" class="header__search-in_box" value=""/>
+						<input type="image" src="./resources/images/basic/gnb-search-btn.jpg" alt="검색" />
+				</form>
+
+			</div>
+		</article>
+
+		<div class="header__wrap">
+			<div class="header__wrap__h1">
+				<h1><a href="/"> <img src="./resources/images/icons/title.png" alt="사이트이름"></a></h1>
+			</div>
+			<div class="gnb" id="gnb">
+				<h2 class="hidden_word">메인메뉴</h2>
+
+				<ul class="gnb__gnb-ul gnb-ul float_wrap">
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>가나다라마바사가나</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장2</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장3</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장4</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+
+										<div class="sub-nav__3rd gnb-thrd-menu">
+											<ul class="sub-nav__3rd__ul">
+												<li class="sub-nav__3rd__ul__li">
+													<a href="#">3차</a>
+												</li>
+												<li class="sub-nav__3rd__ul__li">
+													<a href="#">3차</a>
+												</li>
+												<li class="sub-nav__3rd__ul__li">
+													<a href="#">3차</a>
+												</li>
+											</ul>
+											<!--
+											옛날 cms 식
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+										</div>
+
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+
+
+				</ul>
+			</div><!--// gnb-->
+		</div><!--// header__in-->
+
+
+
+
+		<!-- 전체메뉴 -->
+
+		<div class="all_menu_wrap__outwrap">
+			<div class="btn_all-wrap">
+				<a href="#" class="btn_all">
+					<span class="type1">전체메뉴보기</span>
+					<span class="type2">전체메뉴닫기</span>
+				</a>
+			</div>
+			<article class="all_menu_wrap">
+				<h2 class="all_menu_wrap__h2">사이트 전체메뉴</h2>
+				<div class="all_menu_in">
+
+					<ul class="gnb-ul float_wrap">
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+
+											<div class="sub-nav__3rd gnb-thrd-menu">
+												<ul class="sub-nav__3rd__ul">
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+												</ul>
+												<!--
+												옛날 cms 식
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+											</div>
+
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+
+
+					</ul>
+
+					<!-- <a href="#" class="all_menu_close" onclick="jQuery('.all_menu_wrap__outwrap').removeClass('selected');jQuery('.btn_all').removeClass('selected');jQuery('.btn_all').focus();return false;" title="닫기">닫기</a> -->
+				</div>
+
+				<script>
+					all_menu_open();
+				</script>
+			</article>
+		</div>
+		<!-- 전체메뉴 -->
+
+		<!-- 모바일 메뉴 -->
+		<div class="mobile_top_nav">
+			<div class="mobile_icon">
+				<a href="#gnb_nav_mobile" class="m_open_btn mobile_on_off">메뉴보기</a>
+				<a href="#" class="m_s_btn">검색</a>
+			</div>
+			<div class="mobile_top_nav__in">
+				<nav id="gnb_nav_mobile">
+					<h2 class="hidden_word">menu</h2>
+
+					<ul class="gnb-ul float_wrap">
+
+						<!-- 위의 메뉴와 똑같이. -->
+
+						<li class="gnb-menu on"> <!-- on 클래스 위치 -->
+							<a href="http://daum.net" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap on"> <!-- on 클래스 위치 -->
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+						<li class="gnb-menu">
+							<a href="http://daum.net" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						</li>
+
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+											<div class="sub-nav__3rd gnb-thrd-menu">
+												<ul class="sub-nav__3rd__ul">
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+												</ul>
+												<!--
+												옛날 cms 식
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+											</div>
+
+
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+											<div class="sub-nav__3rd gnb-thrd-menu">
+												<ul class="sub-nav__3rd__ul">
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+												</ul>
+												<!--
+												옛날 cms 식
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+											</div>
+
+
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+						<!-- -->
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<span class="mobile-close mobile_on_off"><a href="#">닫기</a></span>
+
+		<script>
+			mobile_menu();
+			mainGnbMobile();
+			//menuNumbering('.gnb');
+			menuNumbering('.all_menu_in');
+
+		</script>
+
+
+		<script>
+				function headerSearch() {
+					$('.header-search-btn').on('click',function(){
+						$(this).toggleClass('on');
+						$('.header__search').toggleClass('on');
+						$('.header__search-in_box').focus();
+					});
+					$('.m_s_btn').on('click',function(){
+						$(this).toggleClass('on');
+						$('.header__search').toggleClass('on');
+					})
+				}
+				headerSearch();
+			</script>
+
+		<!--디바이스 사이즈-->
+		<p class="resol"></p>
+		<!--디바이스 사이즈-->
+
+
+		<script>
+
+
+			$(document).ready(function() {
+				var winHigh = $(window).outerHeight();
+				var winWidth = $(window).width();
+				jQuery('.resol').text('width : ' + winWidth + ', ' + 'height : ' + winHigh);
+
+			});
+			$(window).resize(function() {
+				var winHigh = $(window).outerHeight();
+				var winWidth = $(window).width();
+				jQuery('.resol').text('width : ' + winWidth + ', ' + 'height : ' + winHigh);
+			});
+
+			/* menuNumbering('.gnb'); <-- 유동적 메뉴사이즈 활성화시 이건 주석처리.*/
+			sizeComp();
+			var is_action = false;
+			function resizeSizeComp() {
+				if (is_action === true) { return false; }
+				is_action = true;
+
+				jQuery('.none-width #gnb .gnb-menu > a').css({paddingLeft:0,paddingRight:0});
+
+				var delayTimer = setInterval(function() {
+
+					var thisIndex = jQuery('.none-width #gnb .gnb-ul > li').index(this);
+					var size_item = jQuery('.none-width #gnb .gnb-ul ').width();
+
+					var totalWidth = 0;
+					var set = $('.none-width #gnb .gnb-ul > li');
+						set.each(function(){
+						totalWidth = totalWidth + $(this).width();
+					});
+
+					var gnbLiN = jQuery('.none-width #gnb .gnb-ul > li').length;
+					var size_resize = ((size_item - totalWidth) / gnbLiN );
+					var size_result = size_resize / 2;
+
+						jQuery('.none-width #gnb .gnb-menu > a').css({paddingLeft:size_result});
+						jQuery('.none-width #gnb .gnb-menu > a').css({paddingRight:size_result - 1});
+
+
+						jQuery('.none-width #gnb .sub-nav').each(function(i) {
+							var size_box = jQuery(this).eq(thisIndex).closest('.gnb-menu').children('.t_item').width();
+							//jQuery(this).eq(thisIndex).css({width:size_box + size_resize -2 });
+						});
+
+					console.log (size_item)
+					clearInterval(delayTimer);
+				}, 10);
+
+			}
+
+
+			$(window).resize(function() {
+				var winWidth = $(window).width();
+				if ( winWidth >= 1200 ) {
+					resizeSizeComp();
+				}
+			});
+		</script>
+	</header>
+	<!--// 헤더 디자인 -->
+
+
+
+	<div class="sub-visual">
+		&nbsp;
+	</div>
+
+	<div class="sub-page-container">
+		<div class="sub-page-container__in">
+
+			<!-- sidebar -->
+			<nav id="sidebar" class="sidebar">
+				<h2 id="menu_sbj" class="sidebar__h2">1뎁스 이름이름</h2>
+				<div class="sidebar__wrap">
+
+					<ul class="side-list">
+
+						<li class="side-list__li on">							<!-- on 클래스 위치 -->
+
+							<span><a href="#">2차 메뉴2차 메뉴2차 메뉴2차 메뉴</a></span>
+
+							<div class="side-list__li__inbox">
+								<ul>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in on">					<!-- on 클래스 위치 -->
+										<a href="#">3차 메뉴</a>
+										<ul class="spp__in__small">
+											<li class="on">					<!-- on 클래스 위치 -->
+												<a href="#">4차 메뉴</a>
+												<!--
+												<ul class="spp__in__small__4th">
+													<li class="on"><a href="#">5차 메뉴 on클래스위치</a></li>
+													<li><a href="#">5차 메뉴</a></li>
+													<li><a href="#">5차 메뉴</a></li>
+												</ul>
+												-->
+
+											</li>
+											<li><a href="#">4차 메뉴</a></li>
+											<li><a href="#">4차 메뉴</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="side-list__li">
+							<span><a href="#">2차 메뉴</a></span>
+						</li>
+
+						<li class="side-list__li">
+							<span><a href="#">2차 메뉴</a></span>
+						</li>
+
+						<li class="side-list__li">
+							<span><a href="#">2차 메뉴</a></span>
+
+							<div class="side-list__li__inbox">
+								<ul>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">					<!-- on 클래스 위치 -->
+										<a href="#">3차 메뉴</a>
+										<ul class="spp__in__small">
+											<li class="">					<!-- on 클래스 위치 -->
+												<a href="#">4차 메뉴</a>
+												<ul class="spp__in__small__4th">
+													<li class=""><a href="#">5차 메뉴</a></li><!-- on 클래스 위치 -->
+													<li><a href="#">5차 메뉴</a></li>
+													<li><a href="#">5차 메뉴</a></li>
+												</ul>
+
+											</li>
+											<li><a href="#">4차 메뉴</a></li>
+											<li><a href="#">4차 메뉴</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="side-list__li">
+							<span><a href="#">2차 메뉴</a></span>
+						</li>
+
+
+					</ul>
+				</div>
+
+			</nav>
+			<!-- sidebar -->
+			<a href="#" class="mobile-submenu-btn" title=""><span class="type1" title="메뉴모두보기">모두보기</span><span class="type2">닫기</span></a>
+
+
+			<script>
+				jQuery(document).ready(function() {
+					side_open();	// 메뉴 클릭시 세부메뉴가 있을경우 펼침으로 동작.
+					//side_open2(); // 메뉴 클릭시 메뉴 바로이동을 원할 경우 활성화함. side_open(); 는 비활성화로.
+					mobileMenuOpen(); //서브페이지 사이드메뉴 펼치고 닫기
+					sizeLength();//사이드바 h2길이
+				});
+			</script>
+
+			<section class="sub-contents">
+
+				<!-- 컨텐츠 제목, 로케이션 -->
+				<article class="sub-contents__top">
+
+					<div class="location-box">
+						<p class="location-box__cont float_wrap">
+							<span><a href="#" class="loc-home">HOME</a></span>
+							<span class="hidden_word">&gt;</span>
+							<span>로케이션</span>
+							<span class="hidden_word">&gt;</span>
+							<span>스타일가이드</span>
+							<span class="hidden_word">&gt;</span>
+							<span>스타일가이드2</span>
+							<span class="hidden_word">&gt;</span>
+							<span>스타일가이드3</span>
+						</p>
+					</div>
+					<h2 id="cont-sbj" class="sub-tit loc_tit">스타일가이드</h2>
+
+				</article>
+				<!-- 컨텐츠 제목, 로케이션 -->
+
+
+				<div class="cont-in">
+				<!-- ====================== 컨텐츠 시작 ====================== -->
+
+
+				<div class="guide-box">
+					<div class="guide-box__table">
+						<table>
+							<colgroup>
+								<col class="col-1">
+								<col class="col-2">
+								<col class="col-3">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>체크박스</th>
+									<th>html로 삽입시</th>
+									<th>scss</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-th="모양">
+
+										<input type="checkbox" class="check-type" id="list-1">
+										<label class="check-type" for="list-1">체크박스</label>
+
+									</td>
+									<td data-th="html로 삽입시">
+<xmp>
+<input type="checkbox" class="check-type" id="list-1">
+<label class="check-type" for="list-1">체크박스</label></xmp>
+									</td>
+									<td data-th="scss" class="clipboard"></td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+
+										<input type="checkbox" class="check-type2" id="list-2">
+										<label class="check-type2" for="list-2">체크박스2</label>
+
+									</td>
+									<td data-th="html로 삽입시">
+<xmp>
+<input type="checkbox" class="check-type2" id="list-2">
+<label class="check-type2" for="list-2">체크박스2</label>
+</xmp>
+									</td>
+									<td data-th="scss" class="clipboard"></td>
+								</tr>
+
+								<tr>
+									<td data-th="모양">
+
+										<input type="checkbox" class="check-type3" id="list-3">
+										<label class="check-type3" for="list-3">체크박스2</label>
+									</td>
+									<td data-th="html로 삽입시">
+<xmp>
+<input type="checkbox" class="check-type3" id="list-3">
+<label class="check-type3" for="list-3">체크박스3</label></xmp>
+									</td>
+									<td data-th="scss" class="clipboard"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+				<div class="guide-box">
+					<div class="guide-box__table res">
+						<table>
+							<colgroup>
+								<col class="col-1">
+								<col class="col-2">
+								<col class="col-3">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>라디오버튼</th>
+									<th>html로 삽입시</th>
+									<th>scss</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-th="모양">
+
+										<input type="radio" class="check-type3" name="dd" id="purchase1">
+										<label class="check-type3" for="purchase1">카드</label>
+										&nbsp;
+										&nbsp;
+										&nbsp;
+										&nbsp;
+										<input type="radio" class="check-type3" name="dd" id="purchase2">
+										<label class="check-type3" for="purchase2">계좌이체</label>
+
+									</td>
+									<td>
+
+<xmp><input type="radio" class="check-type3" name="dd" id="purchase1">
+<label class="check-type3" for="purchase1">카드</label>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<input type="radio" class="check-type3" name="dd" id="purchase2">
+<label class="check-type3" for="purchase2">계좌이체</label>
+</xmp>
+									</td>
+									<td data-th="scss" class="clipboard"></td>
+								</tr>
+
+								<tr>
+									<td data-th="모양">
+
+
+										<input type="radio" class="radio-type" id="ch1" name="test1">
+
+										<label for="ch1" class="choose-label-text">오전</label>
+
+										<input type="radio" class="radio-type" id="ch2" name="test1">
+
+										<label for="ch2" class="choose-label-text">오후</label>
+
+										<input type="radio" class="radio-type" id="ch3" name="test1">
+
+
+											<label for="ch3" class="choose-label-text">직접입력</label>
+											<textarea name="" id="" cols="30" rows="10" class="choose-textarea"
+												placeholder="답변을 입력해주세요"></textarea>
+												※ 접근성 작업 필요
+									</td>
+									<td data-th="html로 삽입시">
+<xmp><input type="radio" class="radio-type" id="ch1" name="test1">
+<label for="ch1" class="choose-label-text">오전</label>
+
+<input type="radio" class="radio-type" id="ch2" name="test1">
+<label for="ch2" class="choose-label-text">오후</label>
+
+
+<input type="radio" class="radio-type" id="ch3" name="test1">
+<label for="ch3" class="choose-label-text">직접입력</label>
+<textarea name="" id="" cols="30" rows="10" class="choose-textarea"
+	placeholder="답변을 입력해주세요"></textarea>
+</xmp>
+									</td>
+									<td data-th="scss" class="clipboard"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+
+				<div class="guide-box">
+					<div class="guide-box__table res">
+						<table>
+							<colgroup>
+								<col class="col-1">
+								<col class="col-2">
+								<col class="col-3">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>셀렉트박스</th>
+									<th>html로 삽입시</th>
+									<th>scss</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-th="모양">
+										<div class="selectboxN1">
+											<select name="" id="">
+												<option value="">내용 내용</option>
+												<option value="">내용 내용내용</option>
+
+												<option value="">내용 내용</option>
+											</select>
+										</div>
+									</td>
+									<td data-th="html로 삽입시">
+	<xmp>
+	<div class="selectboxN1">
+	<select name="" id="">
+		<option value="">내용 내용</option>
+		<option value="">내용 내용</option>
+		<option value="">내용 내용</option>
+	</select>
+	</div></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include selectboxN1
+
+										//내용길이에 맞게 유동적. 또는 직접 style="width:200px"을 주던지 함.
+									</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<div class="selectboxN2">
+											<select name="" id="">
+												<option value="">내용 내용</option>
+												<option value="">내용 내용내용</option>
+
+												<option value="">내용 내용</option>
+											</select>
+										</div>
+									</td>
+									<td data-th="html로 삽입시">
+	<xmp>
+	<div class="selectboxN2">
+	<select name="" id="">
+		<option value="">내용 내용</option>
+		<option value="">내용 내용</option>
+		<option value="">내용 내용</option>
+	</select>
+	</div></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include selectboxN2
+
+										//내용길이에 맞게 유동적. 또는 직접 style="width:200px"을 주던지 함.
+									</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<div class="selectbox">
+											<select name="" id="">
+												<option value="">내용 내용</option>
+												<option value="">내용 내용</option>
+												<option value="">내용 내용</option>
+											</select>
+										</div>
+									</td>
+									<td data-th="html로 삽입시">
+<xmp>
+<div class="selectbox">
+	<select name="" id="">
+		<option value="">내용 내용</option>
+		<option value="">내용 내용</option>
+		<option value="">내용 내용</option>
+	</select>
+</div></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include selectBox(200px) //사이즈 설정</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<div class="selectbox2">
+											<select name="" id="">
+												<option value="">내용 내용</option>
+												<option value="">내용 내용</option>
+												<option value="">내용 내용</option>
+											</select>
+										</div>
+									</td>
+									<td data-th="html로 삽입시">
+<xmp>
+<div class="selectbox2">
+	<select name="" id="">
+		<option value="">내용 내용</option>
+		<option value="">내용 내용</option>
+		<option value="">내용 내용</option>
+	</select>
+</div></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include selectBox2(200px) //사이즈 설정</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<div class="selectbox4">
+											<select name="" id="">
+												<option value="">내용 내용</option>
+												<option value="">내용 내용</option>
+												<option value="">내용 내용</option>
+											</select>
+										</div>
+									</td>
+									<td data-th="html로 삽입시">
+<xmp>
+<div class="selectbox4">
+	<select name="" id="">
+		<option value="">내용 내용</option>
+		<option value="">내용 내용</option>
+		<option value="">내용 내용</option>
+	</select>
+</div></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include selectBox4(200px) //사이즈 설정</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+				<div class="guide-box">
+					<div class="guide-box__table res">
+						<table>
+							<colgroup>
+								<col class="col-1">
+								<col class="col-2">
+								<col class="col-3">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>인풋(text)</th>
+									<th>html로 삽입시</th>
+									<th>scss</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-th="모양">
+										<input type="text" class="inText">
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><input type="text" class="inText"></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include inText(200px) //사이즈 설정</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<input type="text" class="inText2">
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><input type="text" class="inText2"></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include inText2</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<input type="text" class="inText3">
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><input type="text" class="inText3"></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include inText3</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<input type="text" class="inText4" placeholder="종량제봉투로그인">
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><input type="text" class="inText4"></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include inText4</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<input type="text" class="inText5"> 하단 survey
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><input type="text" class="inText5"></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include inText5</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<textarea class="inTextareaN1" placeholder="기타 참고 사항 및 하시고 싶은 말씀을 적어 주시길 바랍니다."></textarea>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><textarea class="inTextareaN1" placeholder="기타 참고 사항 및
+하시고 싶은 말씀을 적어 주시길 바랍니다."></textarea></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">
+										@include inTextareaN1</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+				<div class="guide-box">
+					<div class="guide-box__table res">
+						<table>
+							<colgroup>
+								<col class="col-1">
+								<col class="col-2">
+								<col class="col-3">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>버튼/기타</th>
+									<th>html로 삽입시</th>
+									<th>scss</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-th="모양">
+										<h3 class="h3Type1">타이틀</h3>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><h3 class="h3Type1">타이틀</h3></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include h3Type1;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="btn1">버튼</a>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><a href="#" class="btn1">버튼</a></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include btn1;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="btn2">버튼</a>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><a href="#" class="btn2">버튼</a></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include btn2;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="btn3">버튼</a>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><a href="#" class="btn3">버튼</a></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include btn3;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="btn4">버튼</a>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><a href="#" class="btn4">버튼</a></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include btn4;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="btn5">버튼</a>
+									</td>
+									<td data-th="html로 삽입시"></td>
+									<td data-th="scss">@include btn5(200px); //사이즈 입력</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="btn6">버튼</a>
+									</td>
+									<td data-th="html로 삽입시"></td>
+									<td data-th="scss" class="clipboard">@include btn6(200px); //사이즈 입력</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="btn7">버튼</a>
+									</td>
+									<td data-th="html로 삽입시"></td>
+									<td data-th="scss" class="clipboard">@include btn7(200px); //사이즈 입력</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="downBtn1">버튼</a>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><a href="#" class="downBtn1">버튼</a></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include downBtn1;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="downBtn2">버튼</a>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><a href="#" class="downBtn2">버튼</a></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include downBtn2;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="btnSmall-1">버튼</a>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><a href="#" class="btnSmall-1">버튼</a></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include btnSmall-1;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="btnSmall-2">버튼</a>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><a href="#" class="btnSmall-1">버튼</a></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include btnSmall-2;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<a href="#" class="btnMore">버튼</a>
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp><a href="#" class="btnMore">버튼</a></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include btnMore;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<ul class="basicList">
+											<li>내용입니다</li>
+											<li>내용입니다</li>
+											<li>내용입니다</li>
+											<li>내용입니다</li>
+										</ul>
+									</td>
+									<td data-th="html로 삽입시">
+<xmp><ul class="basicList">
+<li>내용입니다</li>
+<li>내용입니다</li>
+<li>내용입니다</li>
+<li>내용입니다</li>
+</ul></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include basicList;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<ul class="basicList2">
+											<li>내용입니다</li>
+											<li>내용입니다</li>
+											<li>내용입니다</li>
+											<li>내용입니다</li>
+										</ul>
+									</td>
+									<td data-th="html로 삽입시">
+<xmp><ul class="basicList2">
+<li>내용입니다</li>
+<li>내용입니다</li>
+<li>내용입니다</li>
+<li>내용입니다</li>
+</ul></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include basicList2;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+										<ul class="basicList3">
+											<li>내용입니다</li>
+											<li>내용입니다</li>
+											<li>내용입니다</li>
+											<li>내용입니다</li>
+										</ul>
+									</td>
+									<td data-th="html로 삽입시">
+<xmp><ul class="basicList3">
+<li>내용입니다</li>
+<li>내용입니다</li>
+<li>내용입니다</li>
+<li>내용입니다</li>
+</ul></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include basicList3;</td>
+								</tr>
+								<tr>
+									<td data-th="모양">
+									</td>
+									<td data-th="html로 삽입시">
+										<xmp></xmp>
+									</td>
+									<td data-th="scss" class="clipboard">@include ;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="guide-box__box">
+						<h3 class="h4Type2">테이블 가로형 <strong class="col_red">※ 모든 표형식에 res 클래스추가시 반응형때 축약형으로 변함. 그에 따른 추가적인 조치 필요</strong></h3>
+						<div class="guide-box__box__item">
+							<div class="basicTable1 res">
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="">
+										<col style="">
+										<col style="">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>구분</th>
+											<th>구분</th>
+											<th>구분</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+										</tr>
+										<tr>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="guide-box__box__item">
+<xmp>
+<div class="basicTable1 res">
+<table>
+	<caption></caption>
+	<colgroup>
+		<col style="">
+		<col style="">
+		<col style="">
+	</colgroup>
+	<thead>
+		<tr>
+			<th>구분</th>
+			<th>구분</th>
+			<th>구분</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+		</tr>
+		<tr>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</xmp>
+						</div>
+						<div class="guide-box__box__item">
+							@include basicTable1;
+						</div>
+					</div>
+					<div class="guide-box__box">
+						<h3 class="h4Type2">테이블 세로형</h3>
+						<div class="guide-box__box__item">
+							<div class="basicTable2">
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="">
+										<col style="">
+										<col style="">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>내용</th>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+										</tr>
+										<tr>
+											<th>내용</th>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="guide-box__box__item">
+<xmp>
+<div class="basicTable2">
+<table>
+	<caption></caption>
+	<colgroup>
+		<col style="">
+		<col style="">
+		<col style="">
+	</colgroup>
+	<tbody>
+		<tr>
+			<th data-th="구분">내용</th>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+		</tr>
+		<tr>
+			<th data-th="구분">내용</th>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</xmp>
+						</div>
+						<div class="guide-box__box__item">
+							@include basicTable2;
+						</div>
+					</div>
+					<div class="guide-box__box">
+						<h3 class="h4Type2">테이블 </h3>
+						<div class="guide-box__box__item">
+							<div class="basicTable3">
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="">
+										<col style="">
+										<col style="">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>구분</th>
+											<th>구분</th>
+											<th>구분</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>내용</th>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+										</tr>
+										<tr>
+											<th>내용</th>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="guide-box__box__item">
+<xmp>
+<div class="basicTable3">
+<table>
+	<caption></caption>
+	<colgroup>
+		<col style="">
+		<col style="">
+		<col style="">
+	</colgroup>
+	<thead>
+		<tr>
+			<th>구분</th>
+			<th>구분</th>
+			<th>구분</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th data-th="구분">내용</th>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+		</tr>
+		<tr>
+			<th data-th="구분">내용</th>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</xmp>
+						</div>
+						<div class="guide-box__box__item">
+							@include basicTable3;
+						</div>
+					</div>
+
+					<div class="guide-box__box">
+						<h3 class="h4Type2">좌우 보더 없는 테이블 </h3>
+						<div class="guide-box__box__item">
+							<div class="basicTable4">
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="">
+										<col style="">
+										<col style="">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>구분</th>
+											<th>구분</th>
+											<th>구분</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>내용</th>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+										</tr>
+										<tr>
+											<th>내용</th>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="guide-box__box__item">
+<xmp>
+<div class="basicTable4">
+<table>
+	<caption></caption>
+	<colgroup>
+		<col style="">
+		<col style="">
+		<col style="">
+	</colgroup>
+	<thead>
+		<tr>
+			<th>구분</th>
+			<th>구분</th>
+			<th>구분</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th data-th="구분">내용</th>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+		</tr>
+		<tr>
+			<th data-th="구분">내용</th>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</xmp>
+						</div>
+						<div class="guide-box__box__item">
+							@include basicTable4;
+						</div>
+					</div>
+
+
+
+					<div class="guide-box__box">
+						<h3 class="h4Type2">테이블 </h3>
+						<div class="guide-box__box__item">
+							<div class="basicTable5">
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="">
+										<col style="">
+										<col style="">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>구분</th>
+											<th>구분</th>
+											<th>구분</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>내용</th>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+										</tr>
+										<tr>
+											<th>내용</th>
+											<td data-th="구분">내용</td>
+											<td data-th="구분">내용</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="guide-box__box__item">
+<xmp>
+<div class="basicTable5">
+<table>
+	<caption></caption>
+	<colgroup>
+		<col style="">
+		<col style="">
+		<col style="">
+	</colgroup>
+	<thead>
+		<tr>
+			<th>구분</th>
+			<th>구분</th>
+			<th>구분</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th data-th="구분">내용</th>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+		</tr>
+		<tr>
+			<th data-th="구분">내용</th>
+			<td data-th="구분">내용</td>
+			<td data-th="구분">내용</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</xmp>
+						</div>
+						<div class="guide-box__box__item">
+							@include basicTable5;
+						</div>
+					</div>
+
+
+
+
+				</div>
+
+
+
+				<div class="sub-slide">
+					<div class="sub-slide__box">
+						<div>
+							<img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202011/02/seoul/20201102160606287lkvi.jpg" alt="">
+						</div>
+						<div>
+							<img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202011/11/poctan/20201111115637028jmwo.jpg" alt="">
+						</div>
+						<div>
+							<img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202011/03/newsen/20201103163126469xkcl.jpg" alt="">
+						</div>
+						<div>
+							<img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202010/13/newsen/20201013101507523etwn.jpg" alt="">
+						</div>
+						<div>
+							<img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202011/11/IZE/20201111105039115crop.jpg" alt="">
+						</div>
+						<div>
+							<img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202011/11/xportsnews/20201111113406229xvcf.jpg" alt="">
+						</div>
+					</div>
+
+					<a href="#" class="sub-slide__nav sub-slide__prev">이전</a>
+					<a href="#" class="sub-slide__nav sub-slide__next">다음</a>
+				</div>
+
+				<div class="sub-slide-cro">
+					<div>
+						<a href="#" onclick="return false;">
+							<img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202011/02/seoul/20201102160606287lkvi.jpg" alt="">
+						</a>
+					</div>
+					<div>
+						<a href="#" onclick="return false;">
+							<img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202011/11/poctan/20201111115637028jmwo.jpg" alt="">
+						</a>
+					</div>
+					<div>
+						<a href="#" onclick="return false;">
+							<img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202011/03/newsen/20201103163126469xkcl.jpg" alt="">
+						</a>
+					</div>
+					<div>
+						<a href="#" onclick="return false;">
+							<img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202010/13/newsen/20201013101507523etwn.jpg" alt="">
+						</a>
+					</div>
+					<div>
+						<a href="#" onclick="return false;">
+							<img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202011/11/IZE/20201111105039115crop.jpg" alt="">
+						</a>
+					</div>
+					<div>
+						<a href="#" onclick="return false;">
+							<img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202011/11/xportsnews/20201111113406229xvcf.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<script>
+					$('.sub-slide__box').slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						arrows: false,
+						fade: true,
+						asNavFor: '.sub-slide-cro',
+						adaptiveHeight: true
+					});
+					$('.sub-slide-cro').slick({
+						slidesToShow: 5,
+						slidesToScroll: 1,
+						asNavFor: '.sub-slide__box',
+						dots: false,
+						focusOnSelect: true,
+						prevArrow:$('.sub-slide__prev'),
+						nextArrow:$('.sub-slide__next')
+					});
+				</script>
+
+				<input id="clip_target" type="text" value="" style="position:absolute;top:-9999em;"/>
+
+				<script>
+					 $('.clipboard').on('click', function(e) {
+						 // a의 텍스트값을 가져옴
+						 var text = $(this).html();
+
+						 //숨겨진 input박스 value값으로 text 변수 넣어줌.
+						 $('#clip_target').val(text);
+
+						 //input박스 value를 선택
+						 $('#clip_target').select();
+
+						 alert ('클립보드 복사됨');
+						 // Use try & catch for unsupported browser
+						 try {
+							 // The important part (copy selected text)
+							 var successful = document.execCommand('copy');
+							 // if(successful) answer.innerHTML = 'Copied!';
+							 // else answer.innerHTML = 'Unable to copy!';
+						} catch (err) {
+							alert('이 브라우저는 지원하지 않습니다.')
+							}
+						}
+						)
+
+				</script>
+
+				<h3 class="h3Type1">고정비율 @include fixSize($fix11), @include fixSize($fix43), @include fixSize($fix169). 각각 정방형, 4:3, 16:9. 또는 직접 퍼센트로 비율 적용 ex) @include fixSize(43%)</h3>
+				<div class="fix-size">
+					<div class="fix-size__in">
+						<img src="https://junky.kr/wp-content/uploads/2021/04/img_9433-644x859.jpg" alt="">
+					</div>
+				</div>
+
+				---------------------------------
+				<br>
+				<br>
+
+				<h3 class="h3Type1">서브페이지 탭</h3>
+				<article class="sub-tab js-tab-box--1">
+					<h3 class="hidden_word">서브페이지 탭</h3>
+					<ul class="sub-tab__ul js-nav float_wrap">
+						<li class="sub-tab__ul__li js-nav__list on">
+							<a href="#" class="sub-tab__ul__li__a">탭1</a>
+						</li>
+						<li class="sub-tab__ul__li js-nav__list">
+							<a href="#" class="sub-tab__ul__li__a">탭2</a>
+						</li>
+					</ul>
+
+					<div class="sub-tab__cont js-box on">
+						1
+					</div>
+					<div class="sub-tab__cont js-box">
+						2
+					</div>
+				</article>
+
+				<script>
+					subTab('.js-tab-box--1');// 탭 작동
+					menuSize('.js-tab-box--1');// 탭 자동사이즈
+				</script>
+
+				<div class="guide-box__box">
+
+<xmp><article class="sub-tab js-tab-box--1">
+	<h3 class="hidden_word">서브페이지 탭</h3>
+	<ul class="sub-tab__ul js-nav float_wrap">
+		<li class="sub-tab__ul__li js-nav__list on">
+			<a href="#" class="sub-tab__ul__li__a">탭1</a>
+		</li>
+		<li class="sub-tab__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+	</ul>
+
+	<div class="sub-tab__cont js-box on">
+		1
+	</div>
+	<div class="sub-tab__cont js-box">
+		2
+	</div>
+</article>
+
+<script>
+	subTab('.js-tab-box--1');// 탭 작동
+	menuSize('.js-tab-box--1');// 탭 자동사이즈
+</script></xmp>
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+				-------탭에 고유주소 넣기. 동영상, 지도 등이 탭안에 들어갈때는  subtabNew('.클래스') -> subtabNewF5('.클래스')
+
+
+				<article class="sub-tab js-tab-box--2">
+					<h3 class="hidden_word">서브페이지 탭</h3>
+					<ul class="sub-tab__ul js-nav float_wrap">
+						<li class="sub-tab__ul__li js-nav__list on">
+							<a href="#cnt0" class="sub-tab__ul__li__a" role="cnt0">탭1</a>
+						</li>
+						<li class="sub-tab__ul__li js-nav__list">
+							<a href="#cnt1" class="sub-tab__ul__li__a" role="cnt1">탭2</a>
+						</li>
+						<li class="sub-tab__ul__li js-nav__list">
+							<a href="#cnt2" class="sub-tab__ul__li__a" role="cnt2">탭3</a>
+						</li>
+						<li class="sub-tab__ul__li js-nav__list">
+							<a href="#cnt3" class="sub-tab__ul__li__a" role="cnt3">탭4</a>
+						</li>
+					</ul>
+
+					<div id="cnt0" class="sub-tab__cont js-box on">
+						1
+					</div>
+					<div id="cnt1" class="sub-tab__cont js-box">
+						2
+					</div>
+					<div id="cnt2" class="sub-tab__cont js-box">
+						3
+					</div>
+					<div id="cnt3" class="sub-tab__cont js-box">
+						4
+					</div>
+				</article>
+
+				<script>
+					menuNumbering('.js-tab-box--2')// 탭 갯수클래스 추가
+
+					subTabNewF5('.js-tab-box--2');
+					//아래 내용 추가. 변수 맞춰줌.
+
+					$(function () {
+						if (location.hash) {
+							var _hash = location.hash;
+
+							$(_hash).addClass('on').siblings('.js-box').removeClass('on');
+							$('a[href=' + _hash + ']').closest('li').addClass('on').siblings().removeClass('on');
+
+							console.log($(_hash).attr('class'))
+
+							var locItem = $('.location-box__cont > span');
+							var loc = [locItem.eq(2).text(),
+								locItem.eq(4).text(),
+								locItem.eq(6).text(),
+								locItem.eq(8).text()
+								];
+							var locL = locItem.length;
+							var siteTitle = '사이트이름';
+
+							if (locL == 5) {
+								document.title = $('.js-tab-box--2').find( '.js-nav__list.on a' ).text() + ' < ' + loc[1] + ' < ' + loc[0] + ' | ' + siteTitle
+							} else if (locL == 7) {
+								document.title = $('.js-tab-box--2').find( '.js-nav__list.on a' ).text() + ' < ' + loc[2] + ' < ' + loc[1] + ' < ' + loc[0] + ' | ' + siteTitle
+							} else if (locL == 9) {
+								document.title = $('.js-tab-box--2').find( '.js-nav__list.on a' ).text() + ' < ' + loc[3] + ' < ' + loc[2] + ' < ' + loc[1] + ' < ' + loc[0] + ' | ' + siteTitle
+							} else {
+								document.title = $('.js-tab-box--2').find( '.js-nav__list.on a' ).text() + ' < ' + loc[0] + ' | ' + siteTitle
+							}
+
+							var firstTabItem = $('.js-tab-box--2').find('.js-nav__list.on a');
+							$('.js-tab-box--2 .js-nav__list a').find('small').remove();
+							firstTabItem.append("<small class='hidden_word'>(선택됨)</small>");
+						}
+					});
+				</script>
+
+<div class="guide-box__box">
+
+	<xmp><article class="sub-tab js-tab-box--2">
+	<h3 class="hidden_word">서브페이지 탭</h3>
+	<ul class="sub-tab__ul js-nav float_wrap">
+		<li class="sub-tab__ul__li js-nav__list on">
+			<a href="#cnt0" class="sub-tab__ul__li__a" role="cnt0">탭1</a>
+		</li>
+		<li class="sub-tab__ul__li js-nav__list">
+			<a href="#cnt1" class="sub-tab__ul__li__a" role="cnt1">탭2</a>
+		</li>
+		<li class="sub-tab__ul__li js-nav__list">
+			<a href="#cnt2" class="sub-tab__ul__li__a" role="cnt2">탭3</a>
+		</li>
+		<li class="sub-tab__ul__li js-nav__list">
+			<a href="#cnt3" class="sub-tab__ul__li__a" role="cnt3">탭4</a>
+		</li>
+	</ul>
+
+	<div id="cnt0" class="sub-tab__cont js-box on">
+		1
+	</div>
+	<div id="cnt1" class="sub-tab__cont js-box">
+		2
+	</div>
+	<div id="cnt2" class="sub-tab__cont js-box">
+		3
+	</div>
+	<div id="cnt3" class="sub-tab__cont js-box">
+		4
+	</div>
+</article>
+
+<script>
+	menuNumbering('.js-tab-box--2')// 탭 갯수클래스 추가
+
+	subTabNewF5('.js-tab-box--2');
+	//아래 내용 추가. 변수 맞춰줌.
+
+	$(function () {
+		if (location.hash) {
+			var _hash = location.hash;
+
+			$(_hash).addClass('on').siblings('.js-box').removeClass('on');
+			$('a[href=' + _hash + ']').closest('li').addClass('on').siblings().removeClass('on');
+
+			console.log($(_hash).attr('class'))
+
+			var locItem = $('.location-box__cont > span');
+			var loc = [locItem.eq(2).text(),
+				locItem.eq(4).text(),
+				locItem.eq(6).text(),
+				locItem.eq(8).text()
+				];
+			var locL = locItem.length;
+			var siteTitle = '사이트이름';
+
+			if (locL == 5) {
+				document.title = $('.js-tab-box--2').find( '.js-nav__list.on a' ).text() + ' < ' + loc[1] + ' < ' + loc[0] + ' | ' + siteTitle
+			} else if (locL == 7) {
+				document.title = $('.js-tab-box--2').find( '.js-nav__list.on a' ).text() + ' < ' + loc[2] + ' < ' + loc[1] + ' < ' + loc[0] + ' | ' + siteTitle
+			} else if (locL == 9) {
+				document.title = $('.js-tab-box--2').find( '.js-nav__list.on a' ).text() + ' < ' + loc[3] + ' < ' + loc[2] + ' < ' + loc[1] + ' < ' + loc[0] + ' | ' + siteTitle
+			} else {
+				document.title = $('.js-tab-box--2').find( '.js-nav__list.on a' ).text() + ' < ' + loc[0] + ' | ' + siteTitle
+			}
+
+			var firstTabItem = $('.js-tab-box--2').find('.js-nav__list.on a');
+			$('.js-tab-box--2 .js-nav__list a').find('small').remove();
+			firstTabItem.append("<small class='hidden_word'>(선택됨)</small>");
+		}
+	});
+</script></xmp>
+					</div>
+<br>
+<br>
+<br>
+<br>
+<article class="sub-tab2 js-tab-box--3">
+	<h3 class="hidden_word">서브페이지 탭</h3>
+	<ul class="sub-tab2__ul js-nav float_wrap">
+		<li class="sub-tab2__ul__li js-nav__list on">
+			<a href="#" class="sub-tab2__ul__li__a">탭1</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+	</ul>
+
+	<div class="sub-tab2__cont js-box on">
+		<h3 class="hidden_word"></h3>
+		1
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		2
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		3
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		4
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		5
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		6
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		7
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		8
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		9
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		10
+	</div>
+</article>
+<script>
+	menuNumbering('.js-tab-box--3')// 탭 갯수클래스 추가
+
+	subTab('.js-tab-box--3');
+</script>
+
+<div class="guide-box__box">
+
+<xmp><article class="sub-tab2 js-tab-box--3">
+	<h3 class="hidden_word">서브페이지 탭</h3>
+	<ul class="sub-tab2__ul js-nav float_wrap">
+		<li class="sub-tab2__ul__li js-nav__list on">
+			<a href="#" class="sub-tab2__ul__li__a">탭1</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+		<li class="sub-tab2__ul__li js-nav__list">
+			<a href="#" class="sub-tab__ul__li__a">탭2</a>
+		</li>
+	</ul>
+
+	<div class="sub-tab2__cont js-box on">
+		<h3 class="hidden_word"></h3>
+		1
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		2
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		3
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		4
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		5
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		6
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		7
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		8
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		9
+	</div>
+	<div class="sub-tab2__cont js-box">
+		<h3 class="hidden_word"></h3>
+		10
+	</div>
+</article>
+<script>
+	menuNumbering('.js-tab-box--3')// 탭 갯수클래스 추가
+
+	subTab('.js-tab-box--3');
+</script></xmp>
+</div>
+
+<br>
+<br>
+
+	<h3 class="h3Type1">FAQ</h3>
+	<div class="faq-box">
+
+		<div class="faq-box__list">
+			<a href="#" class="faq-box__list__tit">
+				<strong class="faq-box__list__tit__sbj">국제 CC 인증제품을 도입하였습니다. 보안적합성 검증을 신청해야 합니까?</strong>
+			</a>
+			<div class="faq-box__list__answer">
+				내용 내용 내용<br>
+				내용 내용 내용<br>
+				내용 내용 내용
+			</div>
+		</div>
+
+		<div class="faq-box__list">
+			<div class="faq-box__list__tit">
+				<a href="#" class="faq-box__list__tit__sbj">국제 CC 인증제품을 도입하였습니다. 보안적합성 검증을 신청해야 합니까?</a>
+			</div>
+			<div class="faq-box__list__answer">
+				내용 내용 내용<br>
+				내용 내용 내용<br>
+				내용 내용 내용
+			</div>
+		</div>
+
+		<div class="faq-box__list">
+			<div class="faq-box__list__tit">
+				<a href="#" class="faq-box__list__tit__sbj">국제 CC 인증제품을 도입하였습니다. 보안적합성 검증을 신청해야 합니까?</a>
+			</div>
+			<div class="faq-box__list__answer">
+				내용 내용 내용<br>
+				내용 내용 내용<br>
+				내용 내용 내용
+			</div>
+		</div>
+
+	</div>
+	<script>
+		faqNew();
+	</script>
+
+
+<div class="guide-box__box">
+
+<xmp><div class="faq-box">
+
+	<div class="faq-box__list">
+		<a href="#" class="faq-box__list__tit">
+			<strong class="faq-box__list__tit__sbj">국제 CC 인증제품을 도입하였습니다. 보안적합성 검증을 신청해야 합니까?</strong>
+		</a>
+		<div class="faq-box__list__answer">
+			내용 내용 내용<br>
+			내용 내용 내용<br>
+			내용 내용 내용
+		</div>
+	</div>
+
+	<div class="faq-box__list">
+		<div class="faq-box__list__tit">
+			<a href="#" class="faq-box__list__tit__sbj">국제 CC 인증제품을 도입하였습니다.
+				보안적합성 검증을 신청해야 합니까?</a>
+		</div>
+		<div class="faq-box__list__answer">
+			내용 내용 내용<br>
+			내용 내용 내용<br>
+			내용 내용 내용
+		</div>
+	</div>
+
+	<div class="faq-box__list">
+		<div class="faq-box__list__tit">
+			<a href="#" class="faq-box__list__tit__sbj">국제 CC 인증제품을 도입하였습니다.
+				보안적합성 검증을 신청해야 합니까?</a>
+		</div>
+		<div class="faq-box__list__answer">
+			내용 내용 내용<br>
+			내용 내용 내용<br>
+			내용 내용 내용
+		</div>
+	</div>
+
+</div>
+<script>
+	faqNew();
+</script>
+</xmp>
+</div>
+				<!-- ====================== 컨텐츠 종료 ====================== -->
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+	<style>
+
+
+		/* popup */
+		.popup_box {position: absolute; min-width:200px; padding: 10px 10px 35px; border: 1px solid #bbb; border-radius:5px; background-color: #fff; z-index: 99900000; box-shadow: 2px 2px 7px #333; -webkit-box-shadow: 2px 2px 7px #333;}
+		.popup_form_wrap {position:absolute; right:10px; bottom:5px;}
+		.popup_form {text-align:right;}
+		.popup_form > * {display:inline-block; height:17px; line-height:17px; font-size:13px; vertical-align:middle; font-family:'돋움','dotum', sans-serif;}
+		.popup_close {width:36px; background-color:#aaa; border-radius:3px; color:#fff; text-align:center;vertical-align: middle;}
+		@media screen and (min-width:1px) and (max-width:768px) {
+
+
+			.popup_box {
+				width:100% !important;
+				max-width:480px !important;
+				left:0px !important;
+				height:auto !important;
+				box-sizing:border-box;
+				top:50px !important;
+			}
+		}
+</style>
+
+<script type="text/javascript" src="http://www.nctc.go.kr/_common/js/jquery/jquery-ui-1.11.4.min.js"></script>
+<!-- 메인 레이어 팝업 -->
+	<div id="popup_layer_1" class="popup_box" style="top:100px; left:150px; min-width:280px; min-height:180px;display:none;">
+		<div>
+			<p><img alt="" src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202209/30/feelthemovie/20220930142921825updn.jpg"></p>
+		</div>
+
+		<div class="popup_form_wrap">
+			<form name="pop_form">
+				<input id="popup_layer" type="checkbox" name="chkbox" value="checkbox">
+				<label for="popup_layer">오늘하루 열지 않기</label>
+				<a href="#" class="banner-btn popup_close" onclick="closePop();" title="닫기">닫기</a>
+			</form>
+		</div>
+	</div>
+
+
+	<div id="popup_layer_2" class="popup_box" style="top:100px; left:450px; min-width:280px; min-height:180px;display:none;">
+
+		<div>
+			<p>
+				<a href="http://daum.net">
+				<img alt="" src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202209/30/IZE/20220930135820861kpiq.jpg">
+				</a>
+			</p>
+		</div>
+		<div class="popup_form_wrap">
+			<form name="pop_form2">
+				<input id="popup_layer2" type="checkbox" name="chkbox2" value="checkbox">
+				<label for="popup_layer2">오늘하루 열지 않기</label>
+				<a href="#" class="banner-btn popup_close" onclick="closePop2();" title="닫기">닫기</a>
+			</form>
+		</div>
+	</div>
+
+	<script>
+		//<![CDATA[
+
+
+		// 페이지 로드시
+		$(document).ready(function(){
+
+			$(function() {
+				if (getCookie('maindiv') !== 'done') {
+
+					$('#popup_layer_1').css('display','block');
+
+				} else {
+					$('#popup_layer_1').hide();
+				}
+			})
+			$(function() {
+				if (getCookie('maindiv2') !== 'done') {
+
+					$('#popup_layer_2').hide();
+					$('#popup_layer_2').css('display','block');
+
+				} else {
+					$('#popup_layer_2').hide();
+				}
+			})
+		});
+		function getCookie(c_name)
+		{
+			var i,x,y,ARRcookies=document.cookie.split(";");
+			for (i=0;i<ARRcookies.length;i++)
+			{
+				x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+				y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+				x=x.replace(/^\s+|\s+$/g,"");
+				if (x==c_name)
+				{
+				return unescape(y);
+				}
+				}
+		}
+		function setCookie( name, value, expiredays ) {
+
+			var todayDate = new Date();
+			todayDate.setDate( todayDate.getDate() + expiredays );
+			document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+		}
+		function closePop() {
+			if ( document.pop_form.chkbox.checked ){
+				setCookie( "maindiv", "done" , 1 );
+			}
+			//document.getElementById('pop').style.display = "none";
+
+			$('#popup_layer_1').hide();
+		}
+		function closePop2() {
+			if ( document.pop_form2.chkbox2.checked ){
+				setCookie( "maindiv2", "done" , 1 );
+			}
+			//document.getElementById('pop').style.display = "none";
+
+			$('#popup_layer_2').hide();
+		}
+		$( function() {
+			$( ".popup_box" ).draggable();
+		} );
+	</script>
+<!-- 메인 레이어 팝업 -->
+
+	<footer class="footer">
+		<div class="footer__in">
+
+			<p class="foot_img">푸터 타이틀 이미지</p>
+
+			<div class="copy_box">
+				<ul>
+					<li class="persnal-rule"><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">저작권보호정책</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">이메일무단수집거부</a></li>
+					<li><a href="#">관리자</a></li>
+				</ul>
+			</div><!--//copy_box -->
+			<div class="copy_box2">
+				<address class="item1">
+					<ul>
+						<li>우)16279 경기도 수원시 장안구 조원로 18 </li>
+					</ul>
+				</address>
+				<p class="item2">Copyright (c) 사이트 이름. All Rights Reserved.</p>
+			</div><!--//copy_box2 -->
+
+
+			<div class="copy_box3">
+				<dl class="total-count">
+					<dt class="total-count__dt first-dt">Today</dt>
+					<dd class="total-count__dd first-dd">100</dd>
+					<dt class="total-count__dt second-dt">Total</dt>
+					<dd class="total-count__dd second-dd">1524545</dd>
+				</dl>
+
+			</div>
+
+			<div class="copy_box4">
+				<fieldset>
+					<legend>관련기관 바로가기</legend>
+						<form action="/">
+						<div class="footer-select">
+							<label for="foot_sel_01" class="hidden_word">관련기관 바로가기</label>
+							<div class="footer-select__item">
+								<select name="" id="foot_sel_01" title="관련기관 선택">
+
+
+									<option selected="selected">관련기관 바로가기</option>
+									<option>------------------</option>
+									<option value="http://www.gg.go.kr/">경기도청</option>
+									<option value="http://ggwf.gg.go.kr/">경기복지재단</option>
+									<option value="http://www.ggss.or.kr/">경기도지역사회서비스지원단</option>
+
+								</select>
+							</div>
+							<a href="#" class="sel_go_btn" onclick="window.open(jQuery('#foot_sel_01 option:selected').val());" title="새창열림">이동</a>
+						</div>
+					</form>
+				</fieldset>
+			</div>
+		</div>
+
+
+	</footer>
+	<script>title_copy('사이트 이름 ㅇㅇ');</script>
+</body>
+</html>

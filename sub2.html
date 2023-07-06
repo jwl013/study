@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html dir="ltr"lang="ko-KR" class="ie6 lte-ie9 lte-ie8 lte-ie7 lte-ie6"><![endif]-->
+<!--[if lte IE 7]><html dir="ltr"lang="ko-KR" class="ie7 lte-ie9 lte-ie8 lte-ie7"><![endif]-->
+<!--[if IE 8]><html dir="ltr"lang="ko-KR" class="ie8 lte-ie9 lte-ie8"><![endif]-->
+<!--[if IE 9]><html dir="ltr"lang="ko-KR" class="ie9 lte-ie9"><![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html dir="ltr" lang="ko-KR"><!--<![endif]-->
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content=""/>
+	<meta name="author" content="nitroeye-jdh">
+	<meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="stylesheet" href="./resources/styles/style.css">
+
+	<script src="./resources/scripts/jquery.js"></script>
+	<script src="./resources/scripts/jquery-migrate-3.3.2.js"></script>
+	<script src="./resources/scripts/jquery.cookie.js"></script>
+	<script src="./resources/scripts/jquery.cycle.2.js"></script>
+	<script src="./resources/scripts/jquery.cycle.2.carousel.js"></script>
+	<script src="./resources/scripts/jquery.cycle.2.swipe.js"></script>
+	<script src="./resources/scripts/slick.min.js"></script>
+	<script src="./resources/scripts/site.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="./resources/scripts/html5shiv.js"></script>
+    <![endif]-->
+    <title>▦ 사이트 이름</title>
+</head>
+<body class="subpage">
+
+	<!-- 헤더 디자인 -->
+	<header id="header" class="header none-width add-all-menu down-all add-search-btn ver2 left-tit">
+		<!--
+			// title 과 gnb 일렬 정렬시 ver2 추가
+			// 전체메뉴 보기시 add-all-menu 추가
+			// 검색을 버튼으로 켤때 add-search-btn 추가
+			// 2차메뉴 전체 떨어질때  down-all 추가
+			// 유동적 메뉴사이즈 none-width 추가. menuNumbering('.gnb')는 주석처리.
+			// ver2 + 전체 떨어질때 좌측에 타이틀 삽입시 left-tit 추가
+		-->
+
+		<!--스킵 네비게이션-->
+		<article class="skiptoContent">
+			<h2 class="hidden_word">바로가기 메뉴</h2>
+			<div>
+				<strong>바로가기 메뉴</strong>
+				<span class="skip_item01"><a href="#cont-sbj" onclick="document.getElementById('cont-sbj').tabIndex = -1;document.getElementById('cont-sbj').focus();jQuery('#cont-sbj').addClass('selected');return false;">본문내용 바로가기</a></span>
+				<span class="skip_item02"><a href="#gnb" onclick="document.getElementById('gnb').tabIndex = -1;document.getElementById('gnb').focus();return false;">메인메뉴 바로가기</a></span>
+			</div>
+		</article>
+		<script>skipNavi();</script>
+		<!--스킵 네비게이션-->
+
+
+		<div class="header__links">
+			<div class="header__links__1">
+
+				<a href="#">home</a>
+				<a href="#">sitemap</a>
+
+				<span class="header__links__font-size-box font-size-box">
+					<h3>FONT SIZE</h3>
+					<a href="#" class="font-size-item" onclick="js_font_plus();" title="폰트크기 키움">
+						+
+					</a>
+					<span class="size-realtime s1">100%</span>
+					<span class="size-realtime s2">110%</span>
+					<span class="size-realtime s3">120%</span>
+					<span class="size-realtime s4">130%</span>
+					<span class="size-realtime s5">140%</span>
+					<a href="#" class="font-size-item" onclick="js_font_minus();" title="폰트크기 줄임">
+						-
+					</a>
+				</span>
+
+				<a href="#" class="header-search-btn">검색</a>
+			</div>
+		</div>
+
+
+		<article class="header__search">
+			<h2 class="hidden_word">검색</h2>
+			<div class="header__search__in">
+				<form name="searchForm" method="get" action="/" >
+					<label for="searchKeyword" class="hidden_word">검색어 입력</label>
+						<input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요" class="header__search-in_box" value=""/>
+						<input type="image" src="./resources/images/basic/gnb-search-btn.jpg" alt="검색" />
+				</form>
+
+			</div>
+		</article>
+
+		<div class="header__wrap">
+			<div class="header__wrap__h1">
+				<h1><a href="/"> <img src="./resources/images/icons/title.png" alt="사이트이름"></a></h1>
+			</div>
+			<div class="gnb" id="gnb">
+				<h2 class="hidden_word">메인메뉴</h2>
+
+				<ul class="gnb__gnb-ul gnb-ul float_wrap">
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>가나다라마바사가나</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장2</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장3</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장4</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+
+										<div class="sub-nav__3rd gnb-thrd-menu">
+											<ul class="sub-nav__3rd__ul">
+												<li class="sub-nav__3rd__ul__li">
+													<a href="#">3차</a>
+												</li>
+												<li class="sub-nav__3rd__ul__li">
+													<a href="#">3차</a>
+												</li>
+												<li class="sub-nav__3rd__ul__li">
+													<a href="#">3차</a>
+												</li>
+											</ul>
+											<!--
+											옛날 cms 식
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+										</div>
+
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+
+
+				</ul>
+			</div><!--// gnb-->
+		</div><!--// header__in-->
+
+
+
+
+		<!-- 전체메뉴 -->
+
+		<div class="all_menu_wrap__outwrap">
+			<div class="btn_all-wrap">
+				<a href="#" class="btn_all">
+					<span class="type1">전체메뉴보기</span>
+					<span class="type2">전체메뉴닫기</span>
+				</a>
+			</div>
+			<article class="all_menu_wrap">
+				<h2 class="all_menu_wrap__h2">사이트 전체메뉴</h2>
+				<div class="all_menu_in">
+
+					<ul class="gnb-ul float_wrap">
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+
+											<div class="sub-nav__3rd gnb-thrd-menu">
+												<ul class="sub-nav__3rd__ul">
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+												</ul>
+												<!--
+												옛날 cms 식
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+											</div>
+
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+
+
+					</ul>
+
+					<!-- <a href="#" class="all_menu_close" onclick="jQuery('.all_menu_wrap__outwrap').removeClass('selected');jQuery('.btn_all').removeClass('selected');jQuery('.btn_all').focus();return false;" title="닫기">닫기</a> -->
+				</div>
+
+				<script>
+					all_menu_open();
+				</script>
+			</article>
+		</div>
+		<!-- 전체메뉴 -->
+
+		<!-- 모바일 메뉴 -->
+		<div class="mobile_top_nav">
+			<div class="mobile_icon">
+				<a href="#gnb_nav_mobile" class="m_open_btn mobile_on_off">메뉴보기</a>
+				<a href="#" class="m_s_btn">검색</a>
+			</div>
+			<div class="mobile_top_nav__in">
+				<nav id="gnb_nav_mobile">
+					<h2 class="hidden_word">menu</h2>
+
+					<ul class="gnb-ul float_wrap">
+
+						<!-- 위의 메뉴와 똑같이. -->
+
+						<li class="gnb-menu on"> <!-- on 클래스 위치 -->
+							<a href="http://daum.net" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap on"> <!-- on 클래스 위치 -->
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+						<li class="gnb-menu">
+							<a href="http://daum.net" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						</li>
+
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+											<div class="sub-nav__3rd gnb-thrd-menu">
+												<ul class="sub-nav__3rd__ul">
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+												</ul>
+												<!--
+												옛날 cms 식
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+											</div>
+
+
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+											<div class="sub-nav__3rd gnb-thrd-menu">
+												<ul class="sub-nav__3rd__ul">
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+												</ul>
+												<!--
+												옛날 cms 식
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+											</div>
+
+
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+						<!-- -->
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<span class="mobile-close mobile_on_off"><a href="#">닫기</a></span>
+
+		<script>
+			mobile_menu();
+			mainGnbMobile();
+			//menuNumbering('.gnb');
+			menuNumbering('.all_menu_in');
+
+		</script>
+
+
+		<script>
+				function headerSearch() {
+					$('.header-search-btn').on('click',function(){
+						$(this).toggleClass('on');
+						$('.header__search').toggleClass('on');
+						$('.header__search-in_box').focus();
+					});
+					$('.m_s_btn').on('click',function(){
+						$(this).toggleClass('on');
+						$('.header__search').toggleClass('on');
+					})
+				}
+				headerSearch();
+			</script>
+
+		<!--디바이스 사이즈-->
+		<p class="resol"></p>
+		<!--디바이스 사이즈-->
+
+
+		<script>
+
+
+			$(document).ready(function() {
+				var winHigh = $(window).outerHeight();
+				var winWidth = $(window).width();
+				jQuery('.resol').text('width : ' + winWidth + ', ' + 'height : ' + winHigh);
+
+			});
+			$(window).resize(function() {
+				var winHigh = $(window).outerHeight();
+				var winWidth = $(window).width();
+				jQuery('.resol').text('width : ' + winWidth + ', ' + 'height : ' + winHigh);
+			});
+
+			/* menuNumbering('.gnb'); <-- 유동적 메뉴사이즈 활성화시 이건 주석처리.*/
+			sizeComp();
+			var is_action = false;
+			function resizeSizeComp() {
+				if (is_action === true) { return false; }
+				is_action = true;
+
+				jQuery('.none-width #gnb .gnb-menu > a').css({paddingLeft:0,paddingRight:0});
+
+				var delayTimer = setInterval(function() {
+
+					var thisIndex = jQuery('.none-width #gnb .gnb-ul > li').index(this);
+					var size_item = jQuery('.none-width #gnb .gnb-ul ').width();
+
+					var totalWidth = 0;
+					var set = $('.none-width #gnb .gnb-ul > li');
+						set.each(function(){
+						totalWidth = totalWidth + $(this).width();
+					});
+
+					var gnbLiN = jQuery('.none-width #gnb .gnb-ul > li').length;
+					var size_resize = ((size_item - totalWidth) / gnbLiN );
+					var size_result = size_resize / 2;
+
+						jQuery('.none-width #gnb .gnb-menu > a').css({paddingLeft:size_result});
+						jQuery('.none-width #gnb .gnb-menu > a').css({paddingRight:size_result - 1});
+
+
+						jQuery('.none-width #gnb .sub-nav').each(function(i) {
+							var size_box = jQuery(this).eq(thisIndex).closest('.gnb-menu').children('.t_item').width();
+							//jQuery(this).eq(thisIndex).css({width:size_box + size_resize -2 });
+						});
+
+					console.log (size_item)
+					clearInterval(delayTimer);
+				}, 10);
+
+			}
+
+
+			$(window).resize(function() {
+				var winWidth = $(window).width();
+				if ( winWidth >= 1200 ) {
+					resizeSizeComp();
+				}
+			});
+		</script>
+	</header>
+	<!--// 헤더 디자인 -->
+
+	<div class="sub-visual">
+		<h2 class="sub-visual__tit">UNCHANGING QUALITY</h2>
+		<p class="sub-visual__desc">
+			시간이 흘러도 변하지 않는 가치와 품질
+		</p>
+	</div>
+
+	<div class="sub-page-container">
+		<div class="sub-page-container__in">
+
+			<div class="new-lnb float_wrap">
+				<div class="new-lnb__in">
+					<div class="new-lnb__box new-lnb__box--0">
+						<a href="" class="loc-dep loc-dep-home">홈</a>
+					</div>
+
+					<div class="new-lnb__box new-lnb__box--1">
+						<a href="#" class="loc-dep loc-dep-1"><span>위원회소개</span></a>
+						<ul class="loc-dep-1-list">
+							<li class="on">
+								<a href="#">위기유형별 서비스</a>
+							</li>
+							<li>
+								<a href="#">우리동네 청소년안전망 청소년안전망</a>
+							</li>
+							<li>
+								<a href="#">맞춤서비스 검색</a>
+							</li>
+							<li>
+								<a href="#">알림마당</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="new-lnb__box new-lnb__box--2">
+						<a href="#" class="loc-dep loc-dep-2"><span>2뎁스22뎁스</span></a>
+
+						<!-- sidebar -->
+						<nav id="sidebar" class="sidebar loc-dep-2-list">
+							<h2 id="menu_sbj" class="sidebar__h2"><span class="sub_title_new">1차메뉴이름</span> </h2>
+
+							<div class="sidebar__wrap side_in_wrap">
+
+								<ul class="side-list side_ul lnb-bar-ul float_wrap">
+
+									<li class="side-list__li lnb-menu">
+										<span><a href="#">22뎁스22뎁 스22뎁스22뎁스 22뎁스222뎁 스22뎁스22뎁 스22뎁스22뎁스2</a></span>
+									</li>
+
+									<li class="side-list__li lnb-menu on">
+										<span><a href="https://daum.net">2뎁스2</a></span>
+										<div class="side-list__li__inbox">
+											<ul class="sub_left_menu2">
+												<li class="spp__in">
+													<a href="https://www.gsec.or.kr:443/base/contents/view?contentsNo=26&amp;menuLevel=3&amp;menuNo=3">사회적기업
+														소개</a>
+												</li>
+												<li class="spp__in">
+													<a href="https://www.gsec.or.kr:443/base/contents/view?contentsNo=27&amp;menuLevel=3&amp;menuNo=4">협동조합
+														소개</a>
+												</li>
+												<li class="spp__in">
+													<a href="https://www.gsec.or.kr:443/base/contents/view?contentsNo=28&amp;menuLevel=3&amp;menuNo=32">마을기업
+														소개</a>
+
+												</li>
+												<li class="spp__in on">
+
+													<a href="https://www.gsec.or.kr:443/base/contents/view?contentsNo=29&amp;menuLevel=3&amp;menuNo=33">설문조사/만족도조사만족도조사만 족도조사</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+
+									<li class="side-list__li lnb-menu">
+										<span><a href="#">2뎁스3</a></span>
+									</li>
+
+								</ul>
+							</div><!--//side_in_wrap -->
+
+
+						</nav>
+
+
+						<script>
+
+							var lnbDep2 = $('.new-lnb__box--2 .side-list__li.on span a').text();
+								$('.loc-dep-2').text(lnbDep2);
+
+
+								//jQuery(window).on('load',function() {
+									function thirdSideMenu(){
+										var thirdMenuOn = $('.spp__in');
+										var thirdTit = $('.spp__in.on').html();
+
+										if(thirdMenuOn.hasClass('on') == true){
+											//alert('dd')
+											$('.spp__in.on').closest('.side-list__li__inbox').addClass('king');
+											$('.side-list__li__inbox.king').prepend(thirdTit);
+
+											$('.side-list__li__inbox.king > a').attr('href','#').addClass('loc-dep loc-dep-3');
+
+											$('.loc-dep-3').on('click',function(){
+												$('.side-list__li__inbox.king .sub_left_menu2').toggleClass('on');
+												return false;
+											});
+
+										}
+
+									}
+									thirdSideMenu();
+
+
+								//});
+						</script>
+
+
+						<a href="#" class="mobile-submenu-btn selected" title=""><span class="type1">메뉴 △</span><span class="type2">메뉴 ▽</span></a>
+						<script>
+
+							mobileMenuOpen();
+
+							jQuery(document).ready(function() {
+							//side_open();	// 메뉴 클릭시 세부메뉴가 있을경우 펼침으로 동작.
+							//side_open2(); // 메뉴 클릭시 메뉴 바로이동을 원할 경우 활성화함. side_open(); 는 비활성화로.
+							//menuLight();
+							//mobile_ver_menu();
+							function lnbMenu() {
+								$('.loc-dep-1').on('click',function(){
+									$('.loc-dep-1-list').toggleClass('on');
+									$('.loc-dep-2-list').removeClass('on');
+									$('.sub_left_menu2').removeClass('on');
+									return false;
+								});
+								$('.loc-dep-2').on('click',function(){
+									$('.loc-dep-1-list').removeClass('on');
+									$('.loc-dep-2-list').toggleClass('on');
+									$('.sub_left_menu2').removeClass('on');
+									return false;
+								});
+
+								$('html').click(function(e){
+									if(!$(e.target).hasClass('aaa')){
+										$('.loc-dep-1-list').removeClass('on');
+										$('.loc-dep-2-list').removeClass('on');
+									}
+
+
+								});
+							}
+							lnbMenu();
+
+						});
+
+						</script>
+						<!-- sidebar -->
+					</div>
+				</div>
+			</div><!--//new-lnb-->
+
+			<section class="sub-contents">
+
+				<!-- 컨텐츠 제목, 로케이션 -->
+				<article class="sub-contents__top">
+
+					<div class="location-box">
+						<p class="location-box__cont float_wrap">
+							<span><a href="#" class="loc-home">HOME</a></span>
+							<span class="hidden_word">&gt;</span>
+							<span>로케이션</span>
+							<span class="hidden_word">&gt;d</span>
+							<span>페이지</span>
+						</p>
+					</div>
+					<h2 id="cont-sbj" class="sub-tit loc_tit">페이지</h2>
+
+					<div class="special-box">
+						<a href="#" class="special-box__print" onclick="print();" title="프린트">프린트</a>
+						<a href="#" class="special-box__url" onclick="print();" title="URL주소">URL주소</a>
+					</div>
+				</article>
+				<!-- 컨텐츠 제목, 로케이션 -->
+
+
+				<div class="cont-in">
+				<!-- ====================== 컨텐츠 시작 ====================== -->
+
+				<div class="pages">
+					<a href="guide.html" target="_blank">스타일가이드 <span>guide.html</span></a>
+					<a href="index.html" target="_blank">메인페이지 <span>index.html</span></a>
+					<br>
+					<a href="sitemap.html" target="_blank">사이트맵 <span>sitemap.html</span></a>
+					<a href="sitemap.html" target="_blank">사이트맵 <span>sitemap.html</span></a>
+					-----------------------------------------------------------------------------------------------------------------
+
+					<a href="sitemap.html" target="_blank">사이트맵 <span>sitemap.html</span></a>
+					<a href="sitemap.html" target="_blank">사이트맵 <span>sitemap.html</span></a>
+				</div>
+				<!-- ====================== 컨텐츠 종료 ====================== -->
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer__in">
+
+			<p class="foot_img">푸터 타이틀 이미지</p>
+
+			<div class="copy_box">
+				<ul>
+					<li class="persnal-rule"><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">저작권보호정책</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">이메일무단수집거부</a></li>
+					<li><a href="#">관리자</a></li>
+				</ul>
+			</div><!--//copy_box -->
+			<div class="copy_box2">
+				<address class="item1">
+					<ul>
+						<li>우)16279 경기도 수원시 장안구 조원로 18 </li>
+					</ul>
+				</address>
+				<p class="item2">Copyright (c) 사이트 이름. All Rights Reserved.</p>
+			</div><!--//copy_box2 -->
+
+
+			<div class="copy_box3">
+				<dl class="total-count">
+					<dt class="total-count__dt first-dt">Today</dt>
+					<dd class="total-count__dd first-dd">100</dd>
+					<dt class="total-count__dt second-dt">Total</dt>
+					<dd class="total-count__dd second-dd">1524545</dd>
+				</dl>
+
+			</div>
+
+			<div class="copy_box4">
+				<fieldset>
+					<legend>관련기관 바로가기</legend>
+						<form action="/">
+						<div class="footer-select">
+							<label for="foot_sel_01" class="hidden_word">관련기관 바로가기</label>
+							<div class="footer-select__item">
+								<select name="" id="foot_sel_01" title="관련기관 선택">
+
+
+									<option selected="selected">관련기관 바로가기</option>
+									<option>------------------</option>
+									<option value="http://www.gg.go.kr/">경기도청</option>
+									<option value="http://ggwf.gg.go.kr/">경기복지재단</option>
+									<option value="http://www.ggss.or.kr/">경기도지역사회서비스지원단</option>
+
+								</select>
+							</div>
+							<a href="#" class="sel_go_btn" onclick="window.open(jQuery('#foot_sel_01 option:selected').val());" title="새창열림">이동</a>
+						</div>
+					</form>
+				</fieldset>
+			</div>
+		</div>
+
+
+	</footer>
+	<script>title_copy('사이트 이름');</script>
+	<script>
+		$(document).scroll(function(){
+
+			var con = $("body");
+			var position = $(window).scrollTop();
+			if(position > 130){con.addClass('ver-mini');con.removeClass('ver-normal');  }
+			else if(position < 130){ con.addClass('ver-normal');con.removeClass('ver-mini'); }
+
+			//ver-left - 펼침메뉴 좌측 타이틀 삽입관련
+			if(position > 30){con.addClass('ver-left');con.removeClass('ver-normal');  }
+			else if(position < 30){con.removeClass('ver-left'); }
+		});
+	</script>
+</body>
+</html>

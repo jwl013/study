@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html dir="ltr"lang="ko-KR" class="ie6 lte-ie9 lte-ie8 lte-ie7 lte-ie6"><![endif]-->
+<!--[if lte IE 7]><html dir="ltr"lang="ko-KR" class="ie7 lte-ie9 lte-ie8 lte-ie7"><![endif]-->
+<!--[if IE 8]><html dir="ltr"lang="ko-KR" class="ie8 lte-ie9 lte-ie8"><![endif]-->
+<!--[if IE 9]><html dir="ltr"lang="ko-KR" class="ie9 lte-ie9"><![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html dir="ltr" lang="ko-KR"><!--<![endif]-->
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content=""/>
+	<meta name="author" content="nitroeye-jdh">
+	<meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+	<link rel="stylesheet" href="./resources/styles/style.css">
+	<link rel="stylesheet" href="./cms/user/base/css/board.css">
+
+	<script src="./resources/scripts/jquery.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+	<script src="./resources/scripts/jquery.cookie.js"></script>
+	<script src="./resources/scripts/jquery.cycle.2.js"></script>
+	<script src="./resources/scripts/jquery.cycle.2.carousel.js"></script>
+	<script src="./resources/scripts/jquery.cycle.2.swipe.js"></script>
+	<script src="./resources/scripts/slick.min.js"></script>
+	<script src="./resources/scripts/site.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="./resources/scripts/html5shiv.js"></script>
+    <![endif]-->
+    <title>▦ 사이트 이름</title>
+</head>
+<body class="subpage">
+	<!-- 테스트-->
+	<div class="test"></div>
+	<!-- 헤더 디자인 -->
+	<header id="header" class="header none-width add-all-menu down-all add-search-btn ver2 left-tit">
+		<!--
+			// title 과 gnb 일렬 정렬시 ver2 추가
+			// 전체메뉴 보기시 add-all-menu 추가
+			// 검색을 버튼으로 켤때 add-search-btn 추가
+			// 2차메뉴 전체 떨어질때  down-all 추가
+			// 유동적 메뉴사이즈 none-width 추가. menuNumbering('.gnb')는 주석처리.
+			// ver2 + 전체 떨어질때 좌측에 타이틀 삽입시 left-tit 추가
+		-->
+
+		<!--스킵 네비게이션-->
+		<article class="skiptoContent">
+			<h2 class="hidden_word">바로가기 메뉴</h2>
+			<div>
+				<strong>바로가기 메뉴</strong>
+				<span class="skip_item01"><a href="#cont-sbj" onclick="document.getElementById('cont-sbj').tabIndex = -1;document.getElementById('cont-sbj').focus();jQuery('#cont-sbj').addClass('selected');return false;">본문내용 바로가기</a></span>
+				<span class="skip_item02"><a href="#gnb" onclick="document.getElementById('gnb').tabIndex = -1;document.getElementById('gnb').focus();return false;">메인메뉴 바로가기</a></span>
+			</div>
+		</article>
+		<script>skipNavi();</script>
+		<!--스킵 네비게이션-->
+
+
+		<div class="header__links">
+			<div class="header__links__1">
+
+				<a href="#">home</a>
+				<a href="#">sitemap</a>
+
+				<span class="header__links__font-size-box font-size-box">
+					<h3>FONT SIZE</h3>
+					<a href="#" class="font-size-item" onclick="js_font_plus();" title="폰트크기 키움">
+						+
+					</a>
+					<span class="size-realtime s1">100%</span>
+					<span class="size-realtime s2">110%</span>
+					<span class="size-realtime s3">120%</span>
+					<span class="size-realtime s4">130%</span>
+					<span class="size-realtime s5">140%</span>
+					<a href="#" class="font-size-item" onclick="js_font_minus();" title="폰트크기 줄임">
+						-
+					</a>
+				</span>
+
+				<a href="#" class="header-search-btn">검색</a>
+			</div>
+		</div>
+
+
+		<article class="header__search">
+			<h2 class="hidden_word">검색</h2>
+			<div class="header__search__in">
+				<form name="searchForm" method="get" action="/" >
+					<label for="searchKeyword" class="hidden_word">검색어 입력</label>
+						<input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요" class="header__search-in_box" value=""/>
+						<input type="image" src="./resources/images/basic/gnb-search-btn.jpg" alt="검색" />
+				</form>
+
+			</div>
+		</article>
+
+		<div class="header__wrap">
+			<div class="header__wrap__h1">
+				<h1><a href="/"> <img src="./resources/images/icons/title.png" alt="사이트이름"></a></h1>
+			</div>
+			<div class="gnb" id="gnb">
+				<h2 class="hidden_word">메인메뉴</h2>
+
+				<ul class="gnb__gnb-ul gnb-ul float_wrap">
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>가나다라마바사가나</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장2</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장3</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장4</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+
+					<li class="gnb-menu">
+						<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						<div class="sub-nav">
+							<div class="sub-nav__box">
+								<h2 class="gnb-tit">정보광장</h2>
+								<ul class="sub-nav__box__ul float_wrap">
+
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+
+										<div class="sub-nav__3rd gnb-thrd-menu">
+											<ul class="sub-nav__3rd__ul">
+												<li class="sub-nav__3rd__ul__li">
+													<a href="#">3차</a>
+												</li>
+												<li class="sub-nav__3rd__ul__li">
+													<a href="#">3차</a>
+												</li>
+												<li class="sub-nav__3rd__ul__li">
+													<a href="#">3차</a>
+												</li>
+											</ul>
+											<!--
+											옛날 cms 식
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+											<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+										</div>
+
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+									<li class="sub-nav__box__list float_wrap">
+										<a href="#">2차메뉴</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</li>
+
+
+
+				</ul>
+			</div><!--// gnb-->
+		</div><!--// header__in-->
+
+
+
+
+		<!-- 전체메뉴 -->
+
+		<div class="all_menu_wrap__outwrap">
+			<div class="btn_all-wrap">
+				<a href="#" class="btn_all">
+					<span class="type1">전체메뉴보기</span>
+					<span class="type2">전체메뉴닫기</span>
+				</a>
+			</div>
+			<article class="all_menu_wrap">
+				<h2 class="all_menu_wrap__h2">사이트 전체메뉴</h2>
+				<div class="all_menu_in">
+
+					<ul class="gnb-ul float_wrap">
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+
+											<div class="sub-nav__3rd gnb-thrd-menu">
+												<ul class="sub-nav__3rd__ul">
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+												</ul>
+												<!--
+												옛날 cms 식
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+											</div>
+
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+
+
+					</ul>
+
+					<!-- <a href="#" class="all_menu_close" onclick="jQuery('.all_menu_wrap__outwrap').removeClass('selected');jQuery('.btn_all').removeClass('selected');jQuery('.btn_all').focus();return false;" title="닫기">닫기</a> -->
+				</div>
+
+				<script>
+					all_menu_open();
+				</script>
+			</article>
+		</div>
+		<!-- 전체메뉴 -->
+
+		<!-- 모바일 메뉴 -->
+		<div class="mobile_top_nav">
+			<div class="mobile_icon">
+				<a href="#gnb_nav_mobile" class="m_open_btn mobile_on_off">메뉴보기</a>
+				<a href="#" class="m_s_btn">검색</a>
+			</div>
+			<div class="mobile_top_nav__in">
+				<nav id="gnb_nav_mobile">
+					<h2 class="hidden_word">menu</h2>
+
+					<ul class="gnb-ul float_wrap">
+
+						<!-- 위의 메뉴와 똑같이. -->
+
+						<li class="gnb-menu on"> <!-- on 클래스 위치 -->
+							<a href="http://daum.net" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap on"> <!-- on 클래스 위치 -->
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+						<li class="gnb-menu">
+							<a href="http://daum.net" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+						</li>
+
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+											<div class="sub-nav__3rd gnb-thrd-menu">
+												<ul class="sub-nav__3rd__ul">
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+												</ul>
+												<!--
+												옛날 cms 식
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+											</div>
+
+
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="gnb-menu">
+							<a href="#" class="gnb-menu__a"><span>1차메뉴</span></a>
+
+							<div class="sub-nav">
+								<div class="sub-nav__box">
+									<ul class="sub-nav__box__ul float_wrap">
+
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+											<div class="sub-nav__3rd gnb-thrd-menu">
+												<ul class="sub-nav__3rd__ul">
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+													<li class="sub-nav__3rd__ul__li">
+														<a href="#">3차</a>
+													</li>
+												</ul>
+												<!--
+												옛날 cms 식
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a>
+												<a href="#" class="gnb-thrd-menu__item">3차 메뉴</a> -->
+											</div>
+
+
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+										<li class="sub-nav__box__list float_wrap">
+											<a href="#">2차메뉴</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</li>
+						<!-- -->
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<span class="mobile-close mobile_on_off"><a href="#">닫기</a></span>
+
+		<script>
+			mobile_menu();
+			mainGnbMobile();
+			//menuNumbering('.gnb');
+			menuNumbering('.all_menu_in');
+
+		</script>
+
+
+		<script>
+				function headerSearch() {
+					$('.header-search-btn').on('click',function(){
+						$(this).toggleClass('on');
+						$('.header__search').toggleClass('on');
+						$('.header__search-in_box').focus();
+					});
+					$('.m_s_btn').on('click',function(){
+						$(this).toggleClass('on');
+						$('.header__search').toggleClass('on');
+					})
+				}
+				headerSearch();
+			</script>
+
+		<!--디바이스 사이즈-->
+		<p class="resol"></p>
+		<!--디바이스 사이즈-->
+
+
+		<script>
+
+
+			$(document).ready(function() {
+				var winHigh = $(window).outerHeight();
+				var winWidth = $(window).width();
+				jQuery('.resol').text('width : ' + winWidth + ', ' + 'height : ' + winHigh);
+
+			});
+			$(window).resize(function() {
+				var winHigh = $(window).outerHeight();
+				var winWidth = $(window).width();
+				jQuery('.resol').text('width : ' + winWidth + ', ' + 'height : ' + winHigh);
+			});
+
+			/* menuNumbering('.gnb'); <-- 유동적 메뉴사이즈 활성화시 이건 주석처리.*/
+			sizeComp();
+			var is_action = false;
+			function resizeSizeComp() {
+				if (is_action === true) { return false; }
+				is_action = true;
+
+				jQuery('.none-width #gnb .gnb-menu > a').css({paddingLeft:0,paddingRight:0});
+
+				var delayTimer = setInterval(function() {
+
+					var thisIndex = jQuery('.none-width #gnb .gnb-ul > li').index(this);
+					var size_item = jQuery('.none-width #gnb .gnb-ul ').width();
+
+					var totalWidth = 0;
+					var set = $('.none-width #gnb .gnb-ul > li');
+						set.each(function(){
+						totalWidth = totalWidth + $(this).width();
+					});
+
+					var gnbLiN = jQuery('.none-width #gnb .gnb-ul > li').length;
+					var size_resize = ((size_item - totalWidth) / gnbLiN );
+					var size_result = size_resize / 2;
+
+						jQuery('.none-width #gnb .gnb-menu > a').css({paddingLeft:size_result});
+						jQuery('.none-width #gnb .gnb-menu > a').css({paddingRight:size_result - 1});
+
+
+						jQuery('.none-width #gnb .sub-nav').each(function(i) {
+							var size_box = jQuery(this).eq(thisIndex).closest('.gnb-menu').children('.t_item').width();
+							//jQuery(this).eq(thisIndex).css({width:size_box + size_resize -2 });
+						});
+
+					console.log (size_item)
+					clearInterval(delayTimer);
+				}, 10);
+
+			}
+
+
+			$(window).resize(function() {
+				var winWidth = $(window).width();
+				if ( winWidth >= 1200 ) {
+					resizeSizeComp();
+				}
+			});
+		</script>
+	</header>
+	<!--// 헤더 디자인 -->
+
+
+
+	<div class="sub-visual">
+		&nbsp;
+	</div>
+	<div class="sub-page-container">
+		<div class="sub-page-container__in">
+
+			<!-- sidebar -->
+			<nav id="sidebar" class="sidebar">
+				<h2 id="menu_sbj" class="sidebar__h2">1뎁스 이름이름</h2>
+				<div class="sidebar__wrap">
+
+					<ul class="side-list">
+
+						<li class="side-list__li on">							<!-- on 클래스 위치 -->
+
+							<span><a href="#">2차 메뉴</a></span>
+
+							<div class="side-list__li__inbox">
+								<ul>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in on">					<!-- on 클래스 위치 -->
+										<a href="#">3차 메뉴</a>
+										<ul class="spp__in__small">
+											<li class="on">					<!-- on 클래스 위치 -->
+												<a href="#">4차 메뉴</a>
+												<!--
+												<ul class="spp__in__small__4th">
+													<li class="on"><a href="#">5차 메뉴 on클래스위치</a></li>
+													<li><a href="#">5차 메뉴</a></li>
+													<li><a href="#">5차 메뉴</a></li>
+												</ul>
+												-->
+
+											</li>
+											<li><a href="#">4차 메뉴</a></li>
+											<li><a href="#">4차 메뉴</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="side-list__li">
+							<span><a href="#">2차 메뉴</a></span>
+						</li>
+
+						<li class="side-list__li">
+							<span><a href="#">2차 메뉴</a></span>
+						</li>
+
+						<li class="side-list__li">
+							<span><a href="#">2차 메뉴</a></span>
+
+							<div class="side-list__li__inbox">
+								<ul>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">
+										<a href="#">3차 메뉴</a>
+									</li>
+									<li class="spp__in">					<!-- on 클래스 위치 -->
+										<a href="#">3차 메뉴</a>
+										<ul class="spp__in__small">
+											<li class="">					<!-- on 클래스 위치 -->
+												<a href="#">4차 메뉴</a>
+												<ul class="spp__in__small__4th">
+													<li class=""><a href="#">5차 메뉴</a></li><!-- on 클래스 위치 -->
+													<li><a href="#">5차 메뉴</a></li>
+													<li><a href="#">5차 메뉴</a></li>
+												</ul>
+
+											</li>
+											<li><a href="#">4차 메뉴</a></li>
+											<li><a href="#">4차 메뉴</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="side-list__li">
+							<span><a href="#">2차 메뉴</a></span>
+						</li>
+
+
+					</ul>
+				</div><!--//side_in_wrap -->
+
+			</nav>
+			<!-- sidebar -->
+			<a href="#" class="mobile-submenu-btn" title=""><span class="type1" title="메뉴모두보기">모두보기</span><span class="type2">닫기</span></a>
+
+
+			<script>
+				jQuery(document).ready(function() {
+					side_open();	// 메뉴 클릭시 세부메뉴가 있을경우 펼침으로 동작.
+					//side_open2(); // 메뉴 클릭시 메뉴 바로이동을 원할 경우 활성화함. side_open(); 는 비활성화로.
+					mobileMenuOpen(); //서브페이지 사이드메뉴 펼치고 닫기
+					sizeLength();//사이드바 h2길이
+				});
+			</script>
+
+			<section class="sub-contents">
+
+				<!-- 컨텐츠 제목, 로케이션 -->
+				<article class="sub-contents__top">
+
+					<div class="location-box">
+						<p class="location-box__cont float_wrap">
+							<span><a href="#" class="loc-home">HOME</a></span>
+							<span class="hidden_word">&gt;</span>
+							<span>로케이션</span>
+							<span class="hidden_word">&gt;</span>
+							<span>서브페이지</span>
+						</p>
+					</div>
+					<h2 id="cont-sbj" class="sub-tit loc_tit">서브페이지</h2>
+
+					<div class="special-box">
+						<a href="#" class="special-box__print" onclick="print();" title="프린트">프린트</a>
+						<a href="#" class="special-box__url" title="URL주소">URL주소</a>
+					</div>
+				</article>
+				<!-- 컨텐츠 제목, 로케이션 -->
+
+
+				<div class="cont-in">
+				<!-- ====================== 컨텐츠 시작 ====================== -->
+
+
+
+
+
+
+
+
+
+	<div class="board_top_contents"><p class="information_text">안양도시공사의 알림사항을 알려드립니다.</p>
+	</div>
+
+		<div class="show-list__top ver2">
+			<p class="show-list__top__info">
+				총 <strong>3362건</strong>의 게시물이 있습니다. (1/337페이지)
+			</p>
+			<div class="show-list__top__search">
+				<form id="boardSearchForm" class="sch_bar" action="http://auc.or.kr:80/base/board/list" method="get">
+					<input type="hidden" name="boardManagementNo" value="8">
+					<input type="hidden" name="menuLevel" value="2">
+					<input type="hidden" name="menuNo" value="11">
+
+
+
+							<div class="selectboxN1">
+								<label for="searchCategory">검색 구분선택</label>
+								<select id="searchCategory" name="searchCategory" class="sch_slt" title="검색 구분 선택">
+									<option value="" selected="">전체</option>
+
+										<option value="65">도시공사</option>
+
+										<option value="66">석수체육공원</option>
+
+										<option value="67">종합운동장</option>
+
+										<option value="68">교통약자이동지원센터</option>
+
+										<option value="69">전체</option>
+
+										<option value="70">병목안캠핑장</option>
+
+										<option value="71">비산체육공원</option>
+
+										<option value="72">안양새물공원</option>
+
+										<option value="73">서조체육시설</option>
+
+								</select>
+							</div>
+
+
+
+					<div class="selectboxN1">
+						<select name="searchType" id="searchType" class="sch_slt" title="검색 종류 선택">
+							<option value="total" selected="">종류</option>
+							<option value="title">제목</option>
+							<option value="content">내용</option>
+						</select>
+					</div>
+					<div class="show-list__top__search__inputbox">
+						<input type="text" name="searchWord" value="" class="show-list__top__search__inputbox__input" placeholder="검색어를 입력하세요." title="검색어 입력" maxlength="20">
+
+						<a href="#" onclick="$('#boardSearchForm').submit(); return false;" class="show-list__top__search__submit">검색하기</a>
+					</div>
+				</form>
+			</div>
+		</div><!--//show-list__top-->
+	<!-- sch_bar_box
+	<div class="sch_bar_box clearfix">
+		<p class="total_txt"><i class="xi-file-o"></i> 전체 <span class="num">3362</span> 개</p>
+
+		<form class="sch_bar" action="http://auc.or.kr:80/base/board/list" method="get">
+			<input type="hidden" name="boardManagementNo" value="8">
+			<input type="hidden" name="menuLevel" value="2">
+			<input type="hidden" name="menuNo" value="11">
+
+
+
+
+					<div class="show-list__top__search__selectbox">
+						<label for="searchCategory">검색 구분선택</label>
+						<select id="searchCategory" name="searchCategory" class="sch_slt" title="검색 구분 선택">
+							<option value="" selected>전체</option>
+
+								<option value="65" >도시공사</option>
+
+								<option value="66" >석수체육공원</option>
+
+								<option value="67" >종합운동장</option>
+
+								<option value="68" >교통약자이동지원센터</option>
+
+								<option value="69" >전체</option>
+
+								<option value="70" >병목안캠핑장</option>
+
+								<option value="71" >비산체육공원</option>
+
+								<option value="72" >안양새물공원</option>
+
+								<option value="73" >서조체육시설</option>
+
+						</select>
+					</div>
+
+
+
+
+
+
+
+			<input type="hidden" name="searchType" value="total">
+
+			<input type="text" name="searchWord" id="searchWord" class="sch_input" title="검색어 입력" value="" maxlength="20">
+
+			<button type="submit" class="sch_btn"><span class="ico">검색</span></button>
+
+		</form>
+	</div> -->
+	<!-- // sch_bar_box -->
+
+
+	<!-- board_list -->
+	<table class="board_list">
+		<caption>게시판 목록 - 번호, 구분, 제목, 등록일, 조회</caption>
+
+		<colgroup>
+			<col style="width:8%;">
+
+
+
+					<col style="width:20%">
+
+
+
+
+			<col style="width:auto;">
+			<col style="width:15%;">
+			<col style="width:10%;">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">
+					번호
+				</th>
+
+
+
+						<th scope="col">
+							구분
+						</th>
+
+
+
+
+				<th scope="col">
+					제목
+				</th>
+				<th scope="col">
+					등록일
+				</th>
+				<th scope="col">
+					조회
+				</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<tr>
+
+							<td class="num">
+								3362
+							</td>
+
+
+
+
+									<td class="sort">
+										종합운동장
+									</td>
+
+
+
+
+
+							<td class="tit">
+								<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9847&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">
+									보조체육관 부분운영 공지
+
+
+
+
+
+
+
+
+
+
+
+
+								</a>
+							</td>
+
+
+							<td class="date">
+
+								2020-10-20
+							</td>
+
+
+							<td class="view">
+								85
+							</td>
+						</tr>
+
+
+
+						<tr>
+
+							<td class="num">
+								3361
+							</td>
+
+
+
+
+									<td class="sort">
+										전체
+									</td>
+
+
+
+
+
+							<td class="tit">
+								<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9846&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">
+									주차요금 미납차량 공시송달 공고
+
+
+
+
+
+
+
+
+
+
+
+
+								</a>
+							</td>
+
+
+							<td class="date">
+
+								2020-10-16
+							</td>
+
+
+							<td class="view">
+								90
+							</td>
+						</tr>
+
+
+
+						<tr>
+
+							<td class="num">
+								3360
+							</td>
+
+
+
+
+									<td class="sort">
+										전체
+									</td>
+
+
+
+
+
+							<td class="tit">
+								<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9845&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">
+									세외수입 관련 개인정보 제3자 제공사항 공고
+
+
+
+
+
+
+
+
+
+
+
+
+								</a>
+							</td>
+
+
+							<td class="date">
+
+								2020-10-16
+							</td>
+
+
+							<td class="view">
+								64
+							</td>
+						</tr>
+
+
+
+						<tr>
+
+							<td class="num">
+								3359
+							</td>
+
+
+
+
+									<td class="sort">
+										도시공사
+									</td>
+
+
+
+
+
+							<td class="tit">
+								<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9844&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">
+									호계체육관 재개장 운영 안내
+
+
+
+
+
+
+
+
+
+
+
+
+								</a>
+							</td>
+
+
+							<td class="date">
+
+								2020-10-13
+							</td>
+
+
+							<td class="view">
+								620
+							</td>
+						</tr>
+
+
+
+						<tr>
+
+							<td class="num">
+								3358
+							</td>
+
+
+
+
+									<td class="sort">
+										도시공사
+									</td>
+
+
+
+
+
+							<td class="tit">
+								<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9843&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">
+									9월 대형폐기물스티커 판매 및 판매소 현황
+
+
+
+
+
+
+
+
+
+
+
+
+								</a>
+							</td>
+
+
+							<td class="date">
+
+								2020-10-07
+							</td>
+
+
+							<td class="view">
+								81
+							</td>
+						</tr>
+
+
+
+						<tr>
+
+							<td class="num">
+								3357
+							</td>
+
+
+
+
+									<td class="sort">
+										도시공사
+									</td>
+
+
+
+
+
+							<td class="tit">
+								<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9842&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">
+									9월 불연성마대 판매소
+
+
+
+
+
+
+
+
+
+
+
+
+								</a>
+							</td>
+
+
+							<td class="date">
+
+								2020-10-07
+							</td>
+
+
+							<td class="view">
+								101
+							</td>
+						</tr>
+
+
+
+						<tr>
+
+							<td class="num">
+								3356
+							</td>
+
+
+
+
+									<td class="sort">
+										석수체육공원
+									</td>
+
+
+
+
+
+							<td class="tit">
+								<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9841&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">
+									석수체육공원 배드민턴장 건립공사안내
+
+
+
+
+
+
+
+
+
+
+
+
+								</a>
+							</td>
+
+
+							<td class="date">
+
+								2020-10-06
+							</td>
+
+
+							<td class="view">
+								331
+							</td>
+						</tr>
+
+
+
+						<tr>
+
+							<td class="num">
+								3355
+							</td>
+
+
+
+
+									<td class="sort">
+										전체
+									</td>
+
+
+
+
+
+							<td class="tit">
+								<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9840&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">
+									비산체육공원 / 평촌자유공원 2020년 11월 대관 접수안내
+
+
+
+
+
+
+
+
+
+
+
+
+								</a>
+							</td>
+
+
+							<td class="date">
+
+								2020-09-30
+							</td>
+
+
+							<td class="view">
+								671
+							</td>
+						</tr>
+
+
+
+						<tr>
+
+							<td class="num">
+								3354
+							</td>
+
+
+
+
+									<td class="sort">
+										석수체육공원
+									</td>
+
+
+
+
+
+							<td class="tit">
+								<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9839&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">
+									11월 석수체육공원  축구장 대관안내
+
+
+
+
+
+
+
+
+
+
+
+
+								</a>
+							</td>
+
+
+							<td class="date">
+
+								2020-09-28
+							</td>
+
+
+							<td class="view">
+								242
+							</td>
+						</tr>
+
+
+
+						<tr>
+
+							<td class="num">
+								3353
+							</td>
+
+
+
+
+									<td class="sort">
+										전체
+									</td>
+
+
+
+
+
+							<td class="tit">
+								<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9838&amp;searchCategory=&amp;page=1&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">
+									홈페이지 서버 정기 점검 안내
+
+
+
+
+
+
+
+
+
+
+
+
+								</a>
+							</td>
+
+
+							<td class="date">
+
+								2020-09-23
+							</td>
+
+
+							<td class="view">
+								99
+							</td>
+						</tr>
+
+
+
+
+
+
+
+		</tbody>
+
+	</table>
+	<!-- // board_list -->
+
+
+	<div class="btn_wrap">
+
+		<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;menuLevel=2&amp;menuNo=11" class="common_btn">목록</a>
+	</div>
+
+
+
+
+
+
+			<div class="pagination">
+
+
+
+
+
+
+						<a href="#" onclick="return false;" class="active">1 <span class="hide">페이지</span></a>
+
+
+
+						<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=2&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">2 <span class="hide">페이지 이동</span></a>
+
+
+
+
+
+						<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=3&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">3 <span class="hide">페이지 이동</span></a>
+
+
+
+
+
+						<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=4&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">4 <span class="hide">페이지 이동</span></a>
+
+
+
+
+
+						<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=5&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">5 <span class="hide">페이지 이동</span></a>
+
+
+
+
+
+						<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=6&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">6 <span class="hide">페이지 이동</span></a>
+
+
+
+
+
+						<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=7&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">7 <span class="hide">페이지 이동</span></a>
+
+
+
+
+
+						<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=8&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">8 <span class="hide">페이지 이동</span></a>
+
+
+
+
+
+						<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=9&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">9 <span class="hide">페이지 이동</span></a>
+
+
+
+
+
+						<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=10&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11">10 <span class="hide">페이지 이동</span></a>
+
+
+
+
+
+
+					<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=11&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11" class="page_arrow r1"><i class="xi-step-forward"></i><span class="hide">다음 페이지로 이동</span></a>
+					<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=337&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11" class="page_arrow r2"><i class="xi-fast-forward"></i><span class="hide">마지막 페이지로 이동</span></a>
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- board_view -->
+<div class="board_view">
+	<!-- board_view_top -->
+	<div class="board_view_top">
+
+
+
+
+
+
+
+		<strong class="tit">
+
+
+					<span class="sort">도시공사</span>
+
+
+
+
+			9월 불연성마대 판매소
+		</strong>
+
+		<div class="info">
+			<span class="each">작성일 : 2020-10-07 15:59:38</span>
+			<span class="each">조회 : 101</span>
+		</div>
+
+		<div class="control_box">
+
+
+					<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9841&amp;page=1&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11" class="controler prev" title="이전 게시물 보기"><i class="xi-angle-left"></i><span class="hide">이전 게시물 보기</span></a>
+
+
+
+
+
+
+					<a href="http://auc.or.kr:80/base/board/read?boardManagementNo=8&amp;boardNo=9843&amp;page=1&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11" class="controler next" title="다음 게시물 보기"><i class="xi-angle-right"></i><span class="hide">다음 게시물 보기</span></a>
+
+
+
+		</div>
+
+	</div>
+	<!-- // board_view_top -->
+
+	<!-- board_view_con -->
+	<div class="board_view_con">
+		<div class="editor_view">
+			안양도시공사 홈페이지를 이용해 주셔서 감사합니다.
+
+9월 불연성 마대 판매소를 게시하오니 참고하시기 바랍니다.
+
+불연성 마대는 가정용으로만 사용해 주시고 인테리어 업체 등에서 공사용으로 사용할 수 없으며,
+
+대량방출 시 수거업체에서 수거하지 않을 수 있음을 알려드립니다.
+
+※ 해당 구와 동을 확인 후 상호를 포털사이트에 검색하셔서 전화번호와 주소를 확인하시기 바랍니다.
+※ 재고 확인 후 방문하시기 바랍니다.
+
+기타 문의 사항은 031-389-5311로 전화주시기 바랍니다.
+		</div>
+	</div>
+	<!-- // board_view_con -->
+
+	<!-- board_view_file -->
+	<div class="board_view_file">
+		<p class="tit">첨부파일</p>
+		<div class="file_box">
+
+
+
+						<p class="file_each">
+							<input type="hidden" name="fileImageNo" value="2252">
+							<a href="http://auc.or.kr:80/download/BASIC_ATTACH?storageNo=2252" title="9월 불연성마대 판매소640.pdf 다운로드">9월 불연성마대 판매소640.pdf</a>
+						</p>
+
+						<p class="file_each">
+							<input type="hidden" name="fileImageNo" value="2253">
+							<a href="http://auc.or.kr:80/download/BASIC_ATTACH?storageNo=2253" title="9월 불연성마대 판매소700.xlsx 다운로드">9월 불연성마대 판매소700.xlsx</a>
+						</p>
+
+
+
+
+		</div>
+	</div>
+	<!-- // board_view_file -->
+</div>
+<!-- // board_view -->
+
+
+<div class="btn_wrap">
+	<a href="http://auc.or.kr:80/base/board/list?boardManagementNo=8&amp;page=1&amp;searchCategory=&amp;searchType=&amp;searchWord=&amp;menuLevel=2&amp;menuNo=11" class="common_btn">목록</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- ====================== 컨텐츠 종료 ====================== -->
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+
+	<footer class="footer">
+		<div class="footer__in">
+
+			<p class="foot_img">푸터 타이틀 이미지</p>
+
+			<div class="copy_box">
+				<ul>
+					<li class="persnal-rule"><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">저작권보호정책</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">이메일무단수집거부</a></li>
+					<li><a href="#">관리자</a></li>
+				</ul>
+			</div><!--//copy_box -->
+			<div class="copy_box2">
+				<address class="item1">
+					<ul>
+						<li>우)16279 경기도 수원시 장안구 조원로 18 </li>
+					</ul>
+				</address>
+				<p class="item2">Copyright (c) 사이트 이름. All Rights Reserved.</p>
+			</div><!--//copy_box2 -->
+
+
+			<div class="copy_box3">
+				<dl class="total-count">
+					<dt class="total-count__dt first-dt">Today</dt>
+					<dd class="total-count__dd first-dd">100</dd>
+					<dt class="total-count__dt second-dt">Total</dt>
+					<dd class="total-count__dd second-dd">1524545</dd>
+				</dl>
+
+			</div>
+
+			<div class="copy_box4">
+				<fieldset>
+					<legend>관련기관 바로가기</legend>
+						<form action="/">
+						<div class="footer-select">
+							<label for="foot_sel_01" class="hidden_word">관련기관 바로가기</label>
+							<div class="footer-select__item">
+								<select name="" id="foot_sel_01" title="관련기관 선택">
+
+
+									<option selected="selected">관련기관 바로가기</option>
+									<option>------------------</option>
+									<option value="http://www.gg.go.kr/">경기도청</option>
+									<option value="http://ggwf.gg.go.kr/">경기복지재단</option>
+									<option value="http://www.ggss.or.kr/">경기도지역사회서비스지원단</option>
+
+								</select>
+							</div>
+							<a href="#" class="sel_go_btn" onclick="window.open(jQuery('#foot_sel_01 option:selected').val());" title="새창열림">이동</a>
+						</div>
+					</form>
+				</fieldset>
+			</div>
+		</div>
+
+
+	</footer>
+	<script>title_copy('사이트 이름');</script>
+	<script>
+		$(document).scroll(function(){
+
+			var con = $("body");
+			var position = $(window).scrollTop();
+			if(position > 130){con.addClass('ver-mini');con.removeClass('ver-normal');  }
+			else if(position < 130){ con.addClass('ver-normal');con.removeClass('ver-mini'); }
+
+			//ver-left - 펼침메뉴 좌측 타이틀 삽입관련
+			if(position > 30){con.addClass('ver-left');con.removeClass('ver-normal');  }
+			else if(position < 30){con.removeClass('ver-left'); }
+		});
+	</script>
+</body>
+</html>
