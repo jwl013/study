@@ -1,0 +1,144 @@
+.guide-box {
+	&__table {
+		@include basicTable1;
+		table {
+			colgroup {
+				.col-1 {width:40%;}
+				.col-2 {width:30%;}
+				.col-3 {width:30%;}
+			}
+			td {text-align:left;
+				//font-family: 'korail';
+			}
+		}
+	}
+	&__box {
+		border:1px solid #ddd;
+		border-top:1px solid #000;
+		border-bottom:1px solid #000;
+		padding:20px;
+		margin-bottom:20px;
+		&__item {
+			border:1px solid #ddd;
+			margin-bottom:20px;
+			padding:20px;
+			&:last-child {margin-bottom:0px;}
+		}
+	}
+}
+.h3Type1 {
+	@include h3Type1;
+}
+.h4Type2 {
+	@include h4Type2;
+}
+.btn1 {
+	@include btn1;
+}
+.btn2 {
+	@include btn2;
+}
+.btn3 {
+	@include btn3;
+}
+.btn4 {
+	@include btn4;
+}
+.btn5 {
+	@include btn5(200px);
+}
+.btn6 {
+	@include btn6(200px);
+}
+.btn7 {
+	@include btn7(200px);
+}
+
+.downBtn1 {
+	@include downBtn1;
+}
+.downBtn2 {
+	@include downBtn2;
+}
+.btnSmall-1 {
+	@include btnSmall-1;
+}
+.btnSmall-2 {
+	@include btnSmall-2;
+}
+
+.btnMore {
+	@include btnMore;
+}
+
+
+.basicList {
+	@include basicList;
+}
+.basicList2 {
+	@include basicList2;
+}
+.basicList3 {
+	@include basicList3;
+}
+
+
+.basicTable1 {
+	@include basicTable1;
+}
+.basicTable2 {
+	@include basicTable2;
+}
+.basicTable3 {
+	@include basicTable3;
+}
+.basicTable4 {
+	@include basicTable4;
+}
+.basicTable5 {
+	@include basicTable5;
+}
+
+
+.selectboxN1 {
+	@include selectboxN1;
+}
+.selectboxN2 {
+	@include selectboxN2;
+}
+.selectbox {
+	@include selectBox(200px)
+}
+.selectbox2 {
+	@include selectBox2(200px)
+}
+.selectbox4 {
+	@include selectBox4(200px)
+}
+
+
+.inText {
+	@include inText(200px)
+}
+.inText2 {
+	@include inText2;
+}
+.inText3 {
+	@include inText3
+}
+.inText4 {
+	@include inText4
+}
+.inText5 {
+	@include inText5
+}
+.inTextareaN1 {
+	@include inTextareaN1
+}
+
+$fix169:56.25%; //16:9
+$fix43:75%; // 4:3
+$fix11:100%; // 1:1
+.fix-size {
+	@include fixSize($fix169);
+}

@@ -1,0 +1,83 @@
+$idpassSize: 476px;
+$idpassSize2: 150px;
+
+.idpass-wrap {
+	border:1px solid #333;
+	width:760px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	&__top {
+		background-color:#f7f7f7;
+		border-bottom: 1px solid #333;
+		text-align: center;
+		padding:10px;
+		&__list {margin-right:10px;padding-left:20px;
+			position: relative;
+			display: inline-block;
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				@include sprite($radio-off);
+			}
+			&.on:before {
+				@include sprite($radio-on);
+			}
+		}
+	}
+
+	&__form {
+		padding: 60px;
+		text-align: center;
+		& .line-box {
+			padding-bottom:15px;
+			margin-bottom:15px;
+			border-bottom:1px solid #eee;
+		}
+
+		&__label {
+			width:100px;display: inline-block;font-size:15px;text-align: left;
+			font-weight: bold;
+		}
+		&__input {
+			margin:0 auto;
+			border: 1px solid #000;
+			height: 60px;
+			line-height: 60px;
+			font-size: 16px;
+			padding: 0;
+			padding-left: 10px;
+			box-sizing: border-box;
+			&--1 {
+
+				width:$idpassSize;
+			}
+			&--2 {
+				width:$idpassSize2;
+			}
+		}
+
+		&__select {
+			@include selectBox(120px);
+		}
+		&__submit {
+			margin-top:30px;
+			@include btn2
+		}
+	}
+}
+
+@media screen and (min-width:1px) and (max-width:768px) {
+	.idpass-wrap {width:100%;text-align:left;}
+	.idpass-wrap__form {padding:30px 14px;text-align:left;}
+	.idpass-wrap__form__label {width:100%;}
+	.idpass-wrap__form__input--1 {
+		width:100%;
+	}
+	.idpass-wrap__form__input--2 {
+		width:50%;
+		margin-bottom:5px;
+	}
+	.idpass-wrap__form__select {margin-bottom: 5px;}
+}

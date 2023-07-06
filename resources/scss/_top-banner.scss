@@ -1,0 +1,107 @@
+/*상단배너*/
+.top-banner {
+
+	max-height:$topBannerHeight;
+	&__in {min-height:30px;position:relative;text-align:center;
+		> div:nth-child(1) {min-height:30px;}
+		&__link {
+			display:block;
+			text-align:center;
+			margin:0 auto;
+			color:#fff;
+			font-size:17px;
+			img {margin: 0 auto;}
+			&__tit {
+				color:#f2cb8e;
+				font-weight: normal;
+				padding-right:10px;
+			}
+		}
+		img {max-width: 100%;margin: 0 auto;}
+
+		p {position:absolute;top:0;left:-9999px;font-size:0;overflow:hidden;width:0;height:0;}
+
+		.top-banner-close {
+			background-color:#2b3353;
+			border-radius: 5px;
+			padding: 2px 5px;font-size:0;
+			position: absolute; top: 0; right:10px;text-align: right;
+			a,
+			label {vertical-align:middle;color:#fff;font-size:14px;margin-lefT:5px;}
+
+		}
+		&__slick-pause {
+			position: absolute;
+			top:0;right:200px;
+			display:block;width:22px;height:22px;font-size:0;text-indent: -9999px;border-radius: 20px;
+			@include sprite($visual_pause);
+			vertical-align: top;
+			&:focus {background-color:gold;}
+		}
+	}
+
+	.slick-arrow {display:none !important}
+
+
+	.top-banner-nav {
+		position: absolute;
+		top:10px;
+		left: 0;
+		width:100%;
+		&__in {
+			width:$siteSize;
+			margin:0 auto;
+			position: relative;
+			@media screen and (min-width:1px) and (max-width:$siteSize) {
+				width:auto;
+			}
+			.slick-dots {position: absolute;top:0;right:225px;
+				@include floatWrap;
+				li {float:left;margin-right:5px;
+					button {background-color: transparent;
+						display: inline-block;
+						color: gold;
+						vertical-align: middle;
+						overflow: visible;
+						border: 3px solid #fff;
+						width: 22px;
+						height: 22px;
+						line-height: 22px;
+						border-radius: 22px;
+						font-size: 0;}
+					&.slick-active button {background-color: #fff;
+						border: 3px solid #fff;}
+					button:focus {background-color:gold;}
+				}
+			}
+			&__prev {
+				position: absolute;
+				left:0;top:40px;
+				text-indent: -9999px;
+				@include sprite($top-banner-prev);
+				&:focus {opacity: 0.7;}
+			}
+			&__next {
+				position: absolute;
+				right:0;top:40px;
+				text-indent: -9999px;
+				@include sprite($top-banner-next);
+				&:focus {opacity: 0.7;}
+			}
+		}
+
+	}
+
+}
+
+
+body .top-banner {overflow:hidden;height:0px;max-height:$topBannerHeight;position: relative;z-index: 9;}
+
+body.pop-closed .top-banner {height:0 !important;min-height:0;overflow: hidden;}
+
+@media screen and (min-width:1px) and (max-width:$siteSize) {
+	body .top-banner {height:auto;}
+}
+@media screen and (min-width:1px) and (max-width:768px) {
+	body .top-banner  {display:none;}
+}

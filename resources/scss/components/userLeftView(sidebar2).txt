@@ -1,0 +1,429 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="UTF-8"%>
+
+<%-- 관리자 공통 --%>
+<%@ include file="/WEB-INF/jsp/cms/admin/common/adminCommon.jsp" %>
+
+			<div class="new-lnb float_wrap">
+				<div class="new-lnb__in">
+					<div class="new-lnb__box new-lnb__box--0">
+						<a href="https://www.gsec.or.kr/" class="loc-dep loc-dep-home">홈</a>
+					</div>
+
+					<div class="new-lnb__box new-lnb__box--1">
+						<a href="#" class="loc-dep loc-dep-1"><span>${topInformation.firstTitle}</span></a>
+						<ul class="loc-dep-1-list">
+							<c:forEach var="first" items="${menuList1}">
+							<%-- 메뉴명 - 레벨 1 --%>
+							<c:choose>
+								<c:when test="${not empty topInformation.firstMenuNo and (topInformation.firstMenuNo eq first.menuNo) }">
+									<li class="on">
+								</c:when>
+								<c:otherwise>
+									<li class="">
+								</c:otherwise>
+							</c:choose>
+							<c:choose>
+								<c:when test="${first.type eq 'BASE'}">
+									<a href="${contextPath}/${siteCode}/menu/baseView?menuLevel=${first.menuLevel}&amp;menuNo=${first.menuNo}" class="gnb-menu__a"><span>${first.title}</span></a>
+								</c:when>
+								<c:when test="${first.type eq 'BOARD'}">
+									<a href="${contextPath}/${siteCode}/board/list?boardManagementNo=${first.referenceNo}&amp;menuLevel=${first.menuLevel}&amp;menuNo=${first.menuNo}" class="gnb-menu__a"><span>${first.title}</span></a>
+								</c:when>
+								<c:when test="${first.type eq 'SCHEDULE'}">
+									<a href="${contextPath}/${siteCode}/schedule/list?scheduleManagementNo=${first.referenceNo}&amp;menuLevel=${first.menuLevel}&amp;menuNo=${first.menuNo}" class="gnb-menu__a"><span>${first.title}</span></a>
+								</c:when>
+								<c:when test="${first.type eq 'RENTAL'}">
+									<a href="${contextPath}/${siteCode}/rental/calendar?rentalManagementNo=${first.referenceNo}&amp;menuLevel=${first.menuLevel}&amp;menuNo=${first.menuNo}" class="gnb-menu__a"><span>${first.title}</span></a>
+								</c:when>
+								<c:when test="${first.type eq 'CONTENTS'}">
+									<a href="${contextPath}/${siteCode}/contents/view?contentsNo=${first.referenceNo}&amp;menuLevel=${first.menuLevel}&amp;menuNo=${first.menuNo}" class="gnb-menu__a"><span>${first.title}</span></a>
+								</c:when>
+								<c:when test="${first.type eq 'LINK'}">
+									<c:choose>
+										<c:when test="${not empty first.linkUrl}">
+											<c:choose>
+												<c:when test="${first.linkType eq 'SELF'}">
+													<a href="${first.linkUrl}" target="_self" class="gnb-menu__a"><span>${first.title}</span></a>
+												</c:when>
+												<c:when test="${first.linkType eq 'BLANK'}">
+													<a href="${first.linkUrl}" target="_blank" class="gnb-menu__a"><span>${first.title}</span></a>
+												</c:when>
+												<c:otherwise>
+													<a href="${first.linkUrl}" class="gnb-menu__a"><span>${first.title}</span></a>
+												</c:otherwise>
+											</c:choose>
+										</c:when>
+										<c:otherwise>
+											<a href="#" onclick="return false;" class="gnb-menu__a"><span>${first.title}</span></a>
+										</c:otherwise>
+									</c:choose>
+								</c:when>
+								<c:when test="${first.type eq 'CUSTOM'}">
+									<c:choose>
+										<c:when test="${not empty first.customUrl}">
+											<a href="${first.customUrl}?menuLevel=${first.menuLevel}&amp;menuNo=${first.menuNo}">${first.title}</a>
+										</c:when>
+										<c:otherwise>
+											<a href="#" onclick="return false;">${first.title}</a>
+										</c:otherwise>
+									</c:choose>
+								</c:when>
+
+
+								<c:otherwise>
+								</c:otherwise>
+							</c:choose>
+						</c:forEach>
+						</ul>
+					</div>
+
+					<div class="new-lnb__box new-lnb__box--2">
+						<a href="#" class="loc-dep loc-dep-2"><span>2뎁스22뎁스</span></a>
+
+<!-- sidebar -->
+<nav id="sidebar" class="sidebar loc-dep-2-list">
+
+	<c:choose>
+		<c:when test="${not empty topInformation}">
+			<c:choose>
+				<c:when test="${not empty topInformation.firstTitle}">
+					<h2 id="menu_sbj" class="sidebar__h2">${topInformation.firstTitle}</h2>
+				</c:when>
+			</c:choose>
+		</c:when>
+		<c:otherwise>
+		</c:otherwise>
+	</c:choose>
+
+
+	<c:choose>
+		<c:when test="${not empty menuList2}">
+		<div class="sidebar__wrap">
+			<ul class="side-list">
+				<c:forEach var="second" items="${menuList2}">
+
+					<c:choose>
+						<c:when test="${second.upperMenuNo eq topInformation.firstMenuNo}">
+							<%-- 메뉴명 - 레벨 2 --%>
+							<c:choose>
+								<c:when test="${param.menuLevel eq 2 and (param.menuNo eq second.menuNo)}">
+									<li class="side-list__li lnb-menu on">
+								</c:when>
+								<c:when test="${not empty topInformation.secondMenuNo and (topInformation.secondMenuNo eq second.menuNo) }">
+									<li class="side-list__li lnb-menu menuBase on">
+								</c:when>
+								<c:when test="${second.type eq 'BASE'}">
+									<li class="side-list__li lnb-menu menuBase">
+								</c:when>
+								<c:otherwise>
+									<li class="side-list__li lnb-menu">
+								</c:otherwise>
+							</c:choose>
+								<c:choose>
+									<c:when test="${second.type eq 'BASE'}">
+										<span><a href="${contextPath}/${siteCode}/menu/baseView?menuLevel=${second.menuLevel}&amp;menuNo=${second.menuNo}">${second.title}</a></span> <!-- 여기 -->
+									</c:when>
+									<c:when test="${second.type eq 'BOARD'}">
+										<span><a href="${contextPath}/${siteCode}/board/list?boardManagementNo=${second.referenceNo}&amp;menuLevel=${second.menuLevel}&amp;menuNo=${second.menuNo}"><em>${second.title}</em></a></span>
+									</c:when>
+									<c:when test="${second.type eq 'SCHEDULE'}">
+										<span><a href="${contextPath}/${siteCode}/schedule/list?scheduleManagementNo=${second.referenceNo}&amp;menuLevel=${second.menuLevel}&amp;menuNo=${second.menuNo}"><em>${second.title}</em></a></span>
+									</c:when>
+									<c:when test="${second.type eq 'RENTAL'}">
+										<span><a href="${contextPath}/${siteCode}/rental/calendar?rentalManagementNo=${second.referenceNo}&amp;menuLevel=${second.menuLevel}&amp;menuNo=${second.menuNo}"><em>${second.title}</em></a></span>
+									</c:when>
+									<c:when test="${second.type eq 'CONTENTS'}">
+										<span><a href="${contextPath}/${siteCode}/contents/view?contentsNo=${second.referenceNo}&amp;menuLevel=${second.menuLevel}&amp;menuNo=${second.menuNo}"><em>${second.title}</em></a></span>
+									</c:when>
+									<c:when test="${second.type eq 'LINK'}">
+										<c:choose>
+											<c:when test="${not empty second.linkUrl}">
+												<c:choose>
+													<c:when test="${second.linkType eq 'SELF'}">
+														<span><a href="${second.linkUrl}" target="_self"><em>${second.title}</em></a></span>
+													</c:when>
+													<c:when test="${second.linkType eq 'BLANK'}">
+														<span><a href="${second.linkUrl}" target="_blank"><em>${second.title}</em></a></span>
+													</c:when>
+													<c:otherwise>
+														<span><a href="${second.linkUrl}"><em>${second.title}</em></a></span>
+													</c:otherwise>
+												</c:choose>
+											</c:when>
+											<c:otherwise>
+												<span><a href="#" onclick="return false;"><em>${second.title}</em></a></span>
+											</c:otherwise>
+										</c:choose>
+									</c:when>
+									<c:when test="${second.type eq 'CUSTOM'}">
+										<c:choose>
+											<c:when test="${not empty second.customUrl}">
+												<span><a href="${second.customUrl}?menuLevel=${second.menuLevel}&amp;menuNo=${second.menuNo}"><em>${second.title}</em></a></span>
+											</c:when>
+											<c:otherwise>
+												<span><a href="#" onclick="return false;"><em>${second.title}</em></a></span>
+											</c:otherwise>
+										</c:choose>
+									</c:when>
+
+									<c:otherwise>
+									</c:otherwise>
+								</c:choose>
+
+								<c:choose>
+									<c:when test="${not empty menuList3}">
+										<div class="side-list__li__inbox">
+										<ul class="sub_left_menu2">
+											<c:forEach var="third" items="${menuList3}">
+
+												<c:choose>
+													<c:when test="${third.upperMenuNo eq second.menuNo}">
+														<%-- 메뉴명 - 레벨 3 --%>
+														<c:choose>
+															<c:when test="${param.menuLevel eq 3 and (param.menuNo eq third.menuNo)}">
+																<li class="spp__in on">
+															</c:when>
+															<c:when test="${not empty topInformation.thirdMenuNo and (topInformation.thirdMenuNo eq third.menuNo) }">
+																<li class="spp__inmenuDir on">
+															</c:when>
+															<c:when test="${third.type eq 'BASE'}">
+																<li class="spp__in menuDir">
+															</c:when>
+															<c:otherwise>
+																<li class="spp__in">
+															</c:otherwise>
+														</c:choose>
+															<c:choose>
+																<c:when test="${third.type eq 'BASE'}">
+																	<a href="#" onclick="return false;">${third.title}</a>
+																</c:when>
+																<c:when test="${third.type eq 'BOARD'}">
+																	<a href="${contextPath}/${siteCode}/board/list?boardManagementNo=${third.referenceNo}&amp;menuLevel=${third.menuLevel}&amp;menuNo=${third.menuNo}">${third.title}</a>
+																</c:when>
+																<c:when test="${third.type eq 'SCHEDULE'}">
+																	<a href="${contextPath}/${siteCode}/schedule/list?scheduleManagementNo=${third.referenceNo}&amp;menuLevel=${third.menuLevel}&amp;menuNo=${third.menuNo}">${third.title}</a>
+																</c:when>
+																<c:when test="${third.type eq 'RENTAL'}">
+																	<a href="${contextPath}/${siteCode}/rental/calendar?rentalManagementNo=${third.referenceNo}&amp;menuLevel=${third.menuLevel}&amp;menuNo=${third.menuNo}">${third.title}</a>
+																</c:when>
+																<c:when test="${third.type eq 'CONTENTS'}">
+																	<a href="${contextPath}/${siteCode}/contents/view?contentsNo=${third.referenceNo}&amp;menuLevel=${third.menuLevel}&amp;menuNo=${third.menuNo}">${third.title}</a>
+																</c:when>
+																<c:when test="${third.type eq 'LINK'}">
+																	<c:choose>
+																		<c:when test="${not empty third.linkUrl}">
+																			<c:choose>
+																				<c:when test="${third.linkType eq 'SELF'}">
+																					<a href="${third.linkUrl}" target="_self">${third.title}</a>
+																				</c:when>
+																				<c:when test="${third.linkType eq 'BLANK'}">
+																					<a href="${third.linkUrl}" target="_blank">${third.title}</a>
+																				</c:when>
+																				<c:otherwise>
+																					<a href="${third.linkUrl}">${third.title}</a>
+																				</c:otherwise>
+																			</c:choose>
+																		</c:when>
+																		<c:otherwise>
+																			<a href="#" onclick="return false;">${third.title}</a>
+																		</c:otherwise>
+																	</c:choose>
+																</c:when>
+																<c:when test="${third.type eq 'CUSTOM'}">
+																	<c:choose>
+																		<c:when test="${not empty third.customUrl}">
+																			<a href="${third.customUrl}?menuLevel=${third.menuLevel}&amp;menuNo=${third.menuNo}">${third.title}</a>
+																		</c:when>
+																		<c:otherwise>
+																			<a href="#" onclick="return false;">${third.title}</a>
+																		</c:otherwise>
+																	</c:choose>
+																</c:when>
+																<c:otherwise>
+																</c:otherwise>
+															</c:choose>
+
+
+															<c:choose>
+																<c:when test="${not empty menuList4}">
+
+																	<div class="side-list__li__inbox">
+																	<ul class="sub_left_menu2">
+																		<c:forEach var="fourth" items="${menuList4}">
+
+																			<c:choose>
+																				<c:when test="${fourth.upperMenuNo eq third.menuNo}">
+																					<%-- 메뉴명 - 레벨 3 --%>
+																					<li class="spp__in" ${param.menuNo eq fourth.menuNo ? 'class="spp__in on"' : 'class="spp__in menuDir"'}>
+																						<c:choose>
+																							<c:when test="${fourth.type eq 'BASE'}">
+																								<a href="#" onclick="return false;">${third.title}</a>
+																							</c:when>
+																							<c:when test="${fourth.type eq 'BOARD'}">
+																								<a href="${contextPath}/${siteCode}/board/list?boardManagementNo=${fourth.referenceNo}&amp;menuLevel=${fourth.menuLevel}&amp;menuNo=${fourth.menuNo}">${fourth.title}</a>
+																							</c:when>
+																							<c:when test="${fourth.type eq 'SCHEDULE'}">
+																								<a href="${contextPath}/${siteCode}/schedule/list?scheduleManagementNo=${fourth.referenceNo}&amp;menuLevel=${fourth.menuLevel}&amp;menuNo=${fourth.menuNo}">${fourth.title}</a>
+																							</c:when>
+																							<c:when test="${fourth.type eq 'RENTAL'}">
+																								<a href="${contextPath}/${siteCode}/rental/calendar?rentalManagementNo=${fourth.referenceNo}&amp;menuLevel=${fourth.menuLevel}&amp;menuNo=${fourth.menuNo}">${fourth.title}</a>
+																							</c:when>
+																							<c:when test="${fourth.type eq 'CONTENTS'}">
+																								<a href="${contextPath}/${siteCode}/contents/view?contentsNo=${fourth.referenceNo}&amp;menuLevel=${fourth.menuLevel}&amp;menuNo=${fourth.menuNo}">${fourth.title}</a>
+																							</c:when>
+																							<c:when test="${fourth.type eq 'LINK'}">
+																								<c:choose>
+																									<c:when test="${not empty fourth.linkUrl}">
+																										<c:choose>
+																											<c:when test="${fourth.linkType eq 'SELF'}">
+																												<a href="${fourth.linkUrl}" target="_self">${fourth.title}</a>
+																											</c:when>
+																											<c:when test="${fourth.linkType eq 'BLANK'}">
+																												<a href="${fourth.linkUrl}" target="_blank">${fourth.title}</a>
+																											</c:when>
+																											<c:otherwise>
+																												<a href="${fourth.linkUrl}">${fourth.title}</a>
+																											</c:otherwise>
+																										</c:choose>
+																									</c:when>
+																									<c:otherwise>
+																										<a href="#" onclick="return false;">${fourth.title}</a>
+																									</c:otherwise>
+																								</c:choose>
+																							</c:when>
+																							<c:when test="${fourth.type eq 'CUSTOM'}">
+																								<c:choose>
+																									<c:when test="${not empty fourth.customUrl}">
+																										<a href="${fourth.customUrl}?menuLevel=${fourth.menuLevel}&amp;menuNo=${fourth.menuNo}">${fourth.title}</a>
+																									</c:when>
+																									<c:otherwise>
+																										<a href="#" onclick="return false;">${fourth.title}</a>
+																									</c:otherwise>
+																								</c:choose>
+																							</c:when>
+																							<c:otherwise>
+																							</c:otherwise>
+																						</c:choose>
+																					</li>
+																				</c:when>
+
+																				<c:otherwise>
+																				</c:otherwise>
+																			</c:choose>
+
+																		</c:forEach>
+																	</ul>
+																	</div>
+																</c:when>
+
+																<c:otherwise>
+																</c:otherwise>
+															</c:choose>
+														</li>
+													</c:when>
+
+													<c:otherwise>
+													</c:otherwise>
+												</c:choose>
+
+											</c:forEach>
+										</ul>
+										</div>
+									</c:when>
+
+									<c:otherwise>
+									</c:otherwise>
+								</c:choose>
+							</li>
+						</c:when>
+					</c:choose>
+
+				</c:forEach>
+			</ul>
+		</div>
+		</c:when>
+
+		<c:otherwise>
+		</c:otherwise>
+	</c:choose>
+
+</nav>
+<!-- // sub_left -->
+
+<script>
+
+	var lnbDep2 = $('.new-lnb__box--2 .side-list__li.on span a').text();
+	$('.loc-dep-2').text(lnbDep2);
+
+
+	//jQuery(window).on('load',function() {
+		function thirdSideMenu(){
+			var thirdMenuOn = $('.spp__in');
+			var thirdTit = $('.spp__in.on').html();
+
+			if(thirdMenuOn.hasClass('on') == true){
+				//alert('dd')
+				$('.spp__in.on').closest('.side-list__li__inbox').addClass('king');
+				$('.side-list__li__inbox.king').prepend(thirdTit);
+
+				$('.side-list__li__inbox.king > a').attr('href','#').addClass('loc-dep loc-dep-3');
+
+				$('.loc-dep-3').on('click',function(){
+					$('.side-list__li__inbox.king .sub_left_menu2').toggleClass('on');
+				});
+
+			}
+
+		}
+		thirdSideMenu();
+
+
+	//});
+</script>
+
+
+<a href="#" class="mobile-submenu-btn selected" title=""><span class="type1">메뉴 △</span><span class="type2">메뉴 ▽</span></a>
+<script>
+
+	mobileMenuOpen();
+
+	jQuery(document).ready(function() {
+		//side_open();	// 메뉴 클릭시 세부메뉴가 있을경우 펼침으로 동작.
+		//side_open2(); // 메뉴 클릭시 메뉴 바로이동을 원할 경우 활성화함. side_open(); 는 비활성화로.
+		//menuLight();
+		//mobile_ver_menu();
+		function lnbMenu() {
+			$('.loc-dep-1').on('click',function(){
+				$('.loc-dep-1-list').toggleClass('on');
+				$('.loc-dep-2-list').removeClass('on');
+				$('.sub_left_menu2').removeClass('on');
+				return false;
+			});
+			$('.loc-dep-2').on('click',function(){
+				$('.loc-dep-1-list').removeClass('on');
+				$('.loc-dep-2-list').toggleClass('on');
+				$('.sub_left_menu2').removeClass('on');
+				return false;
+			});
+
+			$('html').click(function(e){
+				if(!$(e.target).hasClass('aaa')){
+					$('.loc-dep-1-list').removeClass('on');
+					$('.loc-dep-2-list').removeClass('on');
+				}
+
+
+			});
+		}
+		lnbMenu();
+
+	});
+
+
+
+
+</script>
+
+					</div>
+				</div>
+			</div><!--//new-lnb-->

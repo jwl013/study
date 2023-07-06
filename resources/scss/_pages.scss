@@ -1,0 +1,121 @@
+.icon-test {
+	padding: 0px;
+	background: {
+		color: #000;
+	};
+	height: 28px;
+	display:inline-block;
+	&:after {
+		content: '';
+		display: inline-block;
+		@include sprite($mobile-bul-plus,1.5);
+	}
+}
+
+.flex {
+	position: relative;
+	display: flex;
+	// flex-direction: column-reverse;
+	justify-content: space-between;
+	width: 500px;
+	height: 200px;
+	border: 1px solid red;
+
+	&-item {
+		flex: 1;
+		order: 0;
+		width: 100px;
+		height: 100px;
+		border: 1px solid blue;
+		background-color: #ccc;
+
+
+		&:nth-child(3) {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			width: 50px;
+			height: auto;
+			min: {
+				height: 40px;
+				width: 40px;
+			}
+			transform: translateY(-50%);
+			flex: 1;
+			order: 1;
+			background: {
+				color: red;
+			};
+		}
+	}
+}
+.sample {
+    font: {
+        size : 20px;
+    }
+}
+
+/*pages 가이드*/
+.pages {
+	a {
+		display: block;
+		margin-bottom:15px;
+		position: relative;
+		padding-top:3px;
+		padding-bottom:3px;
+
+		span {
+			position: absolute;
+			left:195px;
+			top:0px;
+			border:1px solid #666;
+			display:inline-block;
+			padding:2px;
+			margin-left:10px;
+			width:400px;
+			padding-left:10px;
+		}
+
+		em {
+			color:$red;
+			font-weight: bold;
+		}
+		&:hover span,
+		&:focus span {background-color:#eee}
+		&:hover,
+		&:focus {text-decoration: underline;}
+	}
+}
+@media screen and (min-width:1px) and (max-width:768px) {
+	.pages a span {
+		width: auto;
+		position: relative;
+		left:0;
+		display:block;
+	}
+}
+
+
+//test
+
+.box1 {
+	background-color:#666;
+	position: relative;
+	padding:10px;
+	height:200px;
+
+	&__in {
+		background-color:#eee;
+		position: absolute;;
+		z-index: 9999;
+		top:10%;
+		left:10%;
+
+	}
+}
+
+// print
+@media print {
+	header,footer,.sidebar,.location-box,.special-box,.sub-visual {display:none; }
+	.sub-contents {width:100%;}
+}

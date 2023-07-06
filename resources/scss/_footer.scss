@@ -1,0 +1,223 @@
+/*	footer
+==========*/
+
+$footBgColor: #fff; // 배경색
+$footFontColor: #666; // 기본폰트컬러
+$footFontCpBx1-Color: #000; // 링크컬러
+$footFontCpBx1-Color-p: #1d2f79; // 개인정보처리방침 링크 컬러
+
+
+.footer {
+	background-color:$footBgColor;
+	color:$footFontColor;
+	position: relative;
+	border-top: 1px solid #e5e5e5;
+	font-family: $font2;
+	/*background-image:url("../../commons/images/global/footer-bg.png");background-position:0 45px;background-repeat:repeat-x;*/
+	a:hover,
+	a:focus {text-decoration: underline;}
+	&__in {
+		width:$siteSize;
+		margin:0 auto;
+		position:relative;
+		min-height:150px;
+		@include floatWrap;
+	}
+}
+.foot_img {position:absolute; top:35px;left:0;
+	@include sprite($foot_img);
+	text-indent: -9999px;
+	font-size:0;
+}
+.copy_box {
+	position:absolute;
+	top:30px;
+	left:260px;
+	ul {@include floatWrap;}
+	li {float:left;
+		position: relative;
+		padding-left:30px;
+		a {
+			font-size:13px;
+			font-size:1.3rem;
+			color:$footFontCpBx1-Color;
+			vertical-align: top;
+		}
+		&:before {
+			position: absolute;
+			top:50%;
+			transform: translateY(-50%);
+			left:15px;
+			@include sprite($copy_li_bg);
+		}
+		&:first-child:before {display:none;}
+	}
+	li:first-child {background-image:none;padding-left:0;
+
+	}
+	li:first-child a {background-image:none;}
+	li.persnal-rule a {color:$footFontCpBx1-Color-p;}
+	li.sns-li {background-image:none;}
+}
+
+.copy_box2{
+	position:absolute;
+	top:50px;
+	left:260px;
+	width:auto;
+	padding-top:20px;
+	font-size:12px;
+	.item1{
+		margin-bottom:5px;
+		font-style:normal;
+		font-size:12px;
+		font-size:1.2rem;
+		line-height:1.5;
+		color:$footFontColor;
+		ul {
+			@include floatWrap;
+			li {
+				float:left;
+				padding-left:20px;
+
+				&:first-child {
+					padding-left:0;
+					background-image:none;
+				}
+			}
+		}
+	}
+	.item2 {
+		font-style:normal;
+		margin-top:5px;
+		margin-bottom:4px;
+		font-size:12px;
+		font-size:1.2rem;
+		line-height:1.6;
+		color:$footFontColor;
+	}
+}
+
+.copy_box3 {
+	position:absolute;
+	right:0;
+	top:10px;
+}
+
+.copy_box4 {
+	position:absolute;
+	right:0;
+	top:75px;
+}
+
+/*통계*/
+.total-count {
+	background-color:#399e90;
+	padding:10px 30px 10px 10px;
+	border-radius: 30px;
+	@include floatWrap;
+	&__dt {display:inline-block;color:#fff;margin-right:5px;
+		padding-left:20px;
+		&:before {
+			content: '';padding-right:10px;padding-left:14px;
+			display: inline-block;
+			@include sprite($total-count-bul);
+
+		}
+		&:first-child:before {display:none;}
+	}
+	&__dd {display:inline-block;color:#fff}
+
+}
+
+/*푸더 셀렉트*/
+.footer-select {
+	border:1px solid #717171;
+}
+.footer-select__item {
+	@include selectBox3(200px);
+}
+.sel_go_btn {
+	display:inline-block;
+	height:38px;
+	width:43px;
+	line-height:38px;
+	text-align:center;
+	color:#fff;
+	background-color:#272727;
+	border-left:1px solid #717171;
+}
+*+ html .sel_go_btn {display:inline;}
+
+@media screen and (min-width:1px) and (max-width:$siteSize) {
+
+	/*footer*/
+	.footer {
+		height:auto;
+		min-height:100px;
+		padding:10px;
+		background-image:none;
+		position:relative;
+		z-index:3;
+		padding-top:24px;
+
+		&__in {width:100%;}
+	}
+	.foot_img {display:none;}
+	.copy_box {
+		position:relative;
+		left:0;
+		top:0;
+		margin-bottom:5px;
+		background-color:#eee;
+		padding:5px;
+	}
+	.copy_box2 {
+		position:relative;
+		left:0;
+		top:0;
+		padding-top:10px;
+	}
+	.copy_box li {
+		background-image:none;
+		padding:4px 10px;
+		&::before {display:none;}
+	}
+	.select_bottom {
+		position:relative;
+		right:0;
+		top:0;
+	}
+	.select_bottom p {
+		float:left;
+	}
+	.copy_box2 .item1 li {
+		padding-left:0;
+		background-image:none;
+		float:none;
+	}
+	.copy_box3 {position: relative;top:0;margin-bottom:5px;}
+	.copy_box4 {position: relative;top:0;}
+	.total-count {padding:0;border-radius:0;padding:5px;}
+	.total-count__dt:first-child {padding-left:0;}
+
+	.footer-select {display:inline-block;}
+	.sel_go_btn {border-left:0px;}
+}
+@media screen and (min-width:851px) and (max-width:1000px) {
+
+
+	/*footer*/
+	.copy_box4 {position:absolute;top:39px;right:10px;}
+	.copy_box4 p {float:none;}
+
+}
+
+@media screen and (min-width:1px) and (max-width:768px) {
+	.copy_box2 .item1 li strong {display:block;margin-top:5px;}
+}
+@media screen and (min-width:1px) and (max-width:470px) {
+	.copy_box li {padding:0;float:left;width:50%;text-align:center;padding-top:5px;padding-bottom:5px;}
+
+	.copy_box2 .item1 li {padding-left:0 !important;background-image: none;width:100%;}
+}

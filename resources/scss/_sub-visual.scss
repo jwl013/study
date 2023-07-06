@@ -1,0 +1,32 @@
+.sub-visual {
+	height:210px;
+	transition: all 0.3s ease 0s;
+	background: {
+		image: url("../../resources/images/basic/visual.jpg");
+		repeat: repeat;
+		position: center top;
+		size: auto 100%;
+	}
+	font-family: $font1;
+
+	&__tit {
+		color: #fff;
+		font-size: 35px;
+		font-weight: bold;
+		padding-top: 100px;
+		text-align:center;
+	}
+	&__desc {
+		color: #fff;
+		font-size: 24px;
+		padding-top: 10px;
+		text-align:center;
+	}
+}
+
+@media screen and (min-width:769px) and (max-width:1200px) {
+	.sub-visual__tit {font-size: 40px;}
+}
+@media screen and (min-width:1px) and (max-width:768px) {
+	.sub-visual {display: none;}
+}

@@ -1,0 +1,194 @@
+$resposePlusSize: 0;//반응형에서 더해지는높이값
+@function resposeAllTop(){
+	@return $headerHeight + $resposePlusSize
+}
+$allResposeHeight:resposeAllTop();
+
+/*전체메뉴보기*/
+
+.all_menu_wrap__outwrap {
+	position:relative;width:100%;margin:0 auto;display:none;
+	&.selected {
+		z-index: 10001;
+	}
+}
+
+.btn_all-wrap {
+	width:$siteSize;margin:0 auto;
+	position: relative;
+}
+.btn_all{
+	position: absolute;
+	right: 0;
+	top: 60px;
+	display:block;
+	width:49px;height:49px;
+
+	span {display:block;font-size:0;
+
+		&.type1{@include sprite($all-menu-btn);
+			margin-left:14px !important;
+			margin-top:15px;}
+		&.type2{@include sprite($all-menu-btn-close);display:none !important;
+			margin-left:10px !important;
+			margin-top:5px;}
+
+	}
+	.selected & {
+
+		span.type1{display:none !important;}
+		span.type2{display:inline-block !important;margin-top:10px;}
+	}
+	&:focus {background-color: #e0e0e0;}
+}
+
+.btn_all:hover,
+.btn_all:focus{opacity:0.8}
+
+.all_menu_wrap {
+	width:100%;
+	background-color:#fff;
+	margin:0 auto;
+	z-index:9999;
+	position: absolute;
+	top:$headerHeight;
+	border-top:1px solid #ddd;
+	left:0px;
+
+	box-shadow: 4px 3px 6px -3px rgba(0,0,0,0.75);
+	/*
+	height:0;
+	overflow:hidden;
+	visibility: hidden;*/
+	opacity:0;
+	transition: all 0.7s ease 0s;
+	display:none;
+
+	&__h2 {
+		height: 110px;
+		background-color: #0068b7;
+		display:none;
+	}
+}
+.selected .all_menu_wrap {display:block;
+	height: auto;
+	opacity: 1;
+	visibility: visible;
+	display:block;
+}
+
+.all_menu_in {
+	position:relative;
+	padding:20px;
+	padding-top:40px;
+	width: $siteSize;
+	margin:0 auto;
+	background-color:#fff;
+
+
+
+	.selected & .gnb-menu {border-right:0;}
+	.gnb-ul {padding-right:0;margin-left:-10px;}
+	.gnb-menu {float:left;}
+	.gnb-menu > a {
+		display: block;
+		color:#013f88;
+		font-size: 18px;
+		height:48px;
+		line-height:48px;
+		border-bottom:2px solid #013f88;
+		margin-left:20px;
+		text-align: left;
+		padding-left:20px;
+		font-weight: bold;
+		background-color:#e5ebf3;
+		background-position: right bottom;
+		background-repeat: no-repeat;
+		&:focus {text-decoration: underline;}
+	}
+
+	.gnb-menu:nth-child(1) > a{
+		background-image:url("../../resources/images/basic/all-menu-icon.png");
+	}
+	.gnb-menu:nth-child(2) > a{
+		background-image:url("../../resources/images/basic/all-menu-icon2.png");
+	}
+	.gnb-menu:nth-child(3) > a{
+		background-image:url("../../resources/images/basic/all-menu-icon3.png");
+	}
+	.gnb-menu:nth-child(4) > a{
+		background-image:url("../../resources/images/basic/all-menu-icon4.png");
+	}
+	.gnb-menu:nth-child(5) > a{
+		background-image:url("../../resources/images/basic/all-menu-icon5.png");
+	}
+
+
+	.all_menu_close{
+		color: #333;
+		display: block;
+		font-size: 0;
+		position: absolute;
+		right: 20px;
+		top: -85px;z-index: 9999;
+		width:30px;height:30px;
+		//@include sprite($all_menu_close);
+	}
+
+	.sub-nav {height:auto;visibility:visible}
+
+	.sub-nav__box__ul {margin-left:20px;padding-top:20px;}
+	.sub-nav__box__list > a {
+		display:block;
+		min-height:30px;
+		line-height:30px;
+		padding:0 0 6px 20px;
+		color:#000;
+		font-size:15px;
+		position: relative;
+		&:before{
+			position: absolute;
+			top:14px;left:8px;
+			@include sprite($second-menu);
+		}
+	}
+	.sub-nav__box__list > a:hover,
+	.sub-nav__box__list > a:focus {opacity:0.8;text-decoration:underline;}
+
+
+	.gnb-ul {display:table;width:100%}
+	.gnb-menu {min-width:12%;margin-bottom:20px;}
+	.gnb-menu:first-child {border-left:0px;}
+
+
+	.sub-nav__3rd {text-align: left;padding-left:20px;padding-top:0px;padding-bottom:10px;}
+	.sub-nav__3rd__ul__li a,
+	.gnb-thrd-menu__item {display:block;margin-bottom:12px;
+		padding-left:13px;
+		color:#666;
+		position: relative;
+		&:hover,
+		&:focus {text-decoration: underline;}
+		&:before{
+			position: absolute;
+			top:8px;left:0;
+			@include sprite($thrd-menu)
+		}
+	}
+}
+
+
+@media screen and (min-width:769px) and (max-width:$siteSize) {
+	.all_menu_wrap__outwrap{width:100%;top:0;}
+	.all_menu_in {width: auto;}
+	.all_menu_in .gnb-menu > a {background-image: none !important;}
+	.btn_all-wrap {width:100%;}
+	.btn_all {top:45px}
+	.all_menu_wrap {top:140px;}
+}
+@media screen and (min-width:1px) and (max-width:768px) {
+	.all_menu_wrap__outwrap {display:none !important;}
+	.selected .all_menu_wrap {display:none;}
+
+}
+

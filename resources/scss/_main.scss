@@ -1,0 +1,97 @@
+
+
+/*	메인페이지
+===========================*/
+
+
+.main-section {position:relative;
+	background-color:#eee;
+	font-family: $font2;
+}
+.main-section__in {
+	position:relative;
+	min-height: 500px;
+	width:$siteSize;
+	margin:0 auto;
+	background-color:#fff;
+	@include floatWrap;
+}
+
+.main-lay-1 {float:left;width:50%;}
+.main-lay-2 {float:left;width:50%;}
+.main-lay-3 {float:left;width:50%;}
+.main-lay-4 {float:left;width:50%;}
+
+@media screen and (min-width:1px) and (max-width:$siteSize) {
+	.main-section__in {width:auto;}
+}
+
+@media screen and (min-width:1px) and (max-width:768px) {
+	.main-section {padding-top:51px;}
+}
+
+
+
+/*팝업존*/
+.popupzone {
+
+    position: relative;
+    margin-top: 0px;
+    width: 100%;
+	height: auto;
+	.slick-arrow {border:0px;top:220px;}
+	.slick-prev {position: absolute;left:10px;z-index: 1;display:none !important;}
+	.slick-next {position: absolute;right:10px;z-index: 1;display:none !important;}
+	.slick-slide a:hover,
+	.slick-slide a:focus {opacity: 0.8;}
+
+	&__tit {@include hiddenWord}
+	&__item > img {width:100%}
+}
+
+.popupzone-nav {
+	@include slickDots;
+}
+
+@media screen and (min-width:1px) and (max-width:$siteSize) {
+	.popupzone .popupzone-list__item img {height:230px;object-fit:cover}
+}
+@media screen and (min-width:1px) and (max-width:768px) {
+	.popupzone {max-width:600px;margin:0 auto;margin-bottom:10px;}
+	.popupzone .popupzone-list__item img {height:auto;}
+}
+// ie11~10
+@media screen and (min-width:0\0){
+	.popupzone .popupzone-list__item {height:230px;overflow: hidden;}
+	.popupzone .popupzone-list__item img {height:auto;}
+
+	@media screen and (min-width:1px) and (max-width:$siteSize) {
+		.popupzone .popupzone-list__item {height:230px;overflow: hidden;}
+		.popupzone .popupzone-list__item img {height:230px;object-fit:cover}
+	}
+	@media screen and (min-width:1px) and (max-width:768px) {
+		.popupzone .popupzone-list__item {height:auto;}
+		.popupzone .popupzone-list__item img {height:auto;}
+	}
+}
+// ie9
+.lte-ie9 .popupzone .popupzone-list__item {height:340px;overflow: hidden;}
+.lte-ie9 .popupzone .popupzone-list__item img {height:auto;}
+
+@media screen and (min-width:1px) and (max-width:$siteSize) {
+	.lte-ie9 .popupzone .popupzone-list__item {height:300px;overflow: hidden;}
+	.lte-ie9 .popupzone .popupzone-list__item img {height:300px;object-fit:cover}
+}
+@media screen and (min-width:1px) and (max-width:768px) {
+	.lte-ie9 .popupzone .popupzone-list__item {height:auto;overflow: hidden;}
+	.lte-ie9 .popupzone .popupzone-list__item img {height:auto;}
+}
+
+/*팝업존2*/
+.popupzone-nav2 {
+	@include slickDots;
+}
+
+.popupzone-nav3 {
+	@include slickDots;
+}

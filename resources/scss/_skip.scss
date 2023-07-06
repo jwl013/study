@@ -1,0 +1,17 @@
+
+/*skip navigation*/
+.skiptoContent {
+	position:fixed;left:50%;top:-30px;height:30px;line-height:30px;background-color:#00235d;
+    width: 540px;
+	margin-left: -270px;
+	text-align: center;
+	transition: all 0.3s ease 0s;z-index: 9999;
+	&.on {top:0;}
+	strong {font-size:0;}
+	a {color:#fff;font-size:18px;margin-left:10px;margin-right:10px;}
+	a:focus {color:gold;text-decoration: underline;}
+
+	@media screen and (min-width:1px) and (max-width:768px) {
+		display:none;
+	}
+}

@@ -1,0 +1,237 @@
+/*배너존*/
+.banner_zone_outwrap {
+	font-family: 'Noto Sans KR';
+	margin: 0 auto;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #e0e0e0;
+}
+
+.banner_zone_wrap {
+	position: relative;
+	overflow: hidden;
+	width: $siteSize;
+	margin: 0 auto;
+	height: 50px;
+	h3 {
+		margin-left: 0px;
+		margin-bottom: 0px;
+		font-size: 18px;
+		color: #333333;
+		position: absolute;
+		top: 11px;
+		left: 2px;
+	}
+}
+
+.banner_zone {
+	width: 990px;
+	overflow: hidden;
+	z-index: 0;
+	position: relative;
+	text-align: center;
+	margin-left: 210px;
+
+	.slick-arrow {
+		display: none !important;
+	}
+	a {
+		padding: 0 0;
+	}
+}
+
+.listwrap {
+	position: relative;
+	left: 0;
+	overflow: hidden;
+	li {
+		float: left;
+		width: 198px;
+		height: 50px;
+		a {
+			display: block;
+
+			&:focus img {
+				border: 1px solid gold
+			}
+			img {
+				width: 186px;
+				height: 48px;
+				border: 1px solid #ddd;
+			}
+		}
+	}
+}
+
+
+
+
+.foot_roll_nav2 {
+	position: relative;
+	z-index: 1;
+
+	a {
+		&:focus {
+			border: 1px solid gold;
+		}
+	}
+	.r_prev {
+		left: 83px;
+		top: 13px;
+	}
+	.r_pause {
+		left: 110px;
+		top: 13px;
+	}
+	.r_next {
+		left: 137px;
+		top: 13px;
+	}
+	.r_plus {
+		left: 164px;
+		top: 13px;
+	}
+
+	.r_start {
+		left: 34px;
+		top: 29px;
+	}
+
+	span {
+		float: left;
+		position: absolute;
+	}
+}
+
+.r_plus a {
+	width: 28px;
+	height: 28px;
+	font-size: 0;
+	display: block;
+	background-color: #fff;
+	@include sprite($ico-roll-plus);
+}
+
+.r_pause a {
+	width: 28px;
+	height: 28px;
+	font-size: 0;
+	display: block;
+	background-color: #fff;
+	@include sprite($ico-roll-pause);
+}
+
+.r_start a {
+	width: 28px;
+	height: 28px;
+	font-size: 0;
+	display: block;
+	background-color: #fff;
+	@include sprite($ico-roll-start);
+}
+
+.r_prev a {
+	width: 28px;
+	height: 28px;
+	font-size: 0;
+	display: block;
+	background-color: #fff;
+	@include sprite($ico-roll-left);
+}
+
+.r_next a {
+	width: 28px;
+	height: 28px;
+	font-size: 0;
+	display: block;
+	background-color: #fff;
+	@include sprite($ico-roll-right);
+	margin-right: -1px;
+}
+
+@media screen and (min-width:1px) and (max-width:$siteSize) {
+	.banner_zone_outwrap {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
+
+	.banner_zone_wrap {
+		width: auto;
+	}
+
+	.banner_zone {
+		width: 790px;
+	}
+}
+
+@media screen and (min-width:851px) and (max-width:1000px) {
+
+	/*배너존*/
+	.banner_zone {
+		width: 595px;
+	}
+}
+
+@media screen and (min-width:769px) and (max-width:850px) {
+
+	/*배너존*/
+	.banner_zone {
+		width: 562px;
+	}
+}
+
+@media screen and (min-width:1px) and (max-width:768px) {
+	.banner_zone_wrap {
+		height: auto;
+		padding-left: 10px;
+	}
+
+	.banner_zone_wrap h3 {
+		top: 0px;
+		left: 10px;
+	}
+
+	.foot_roll_nav2 {
+
+		.r_prev {
+			left: 83px;
+			top: 0px;
+		}
+
+		.r_pause {
+			left: 110px;
+			top: 0px;
+		}
+
+		.r_next {
+			left: 137px;
+			top: 0px;
+		}
+
+		.r_plus {
+			left: 164px;
+			top: 0px;
+		}
+
+		.r_start {
+			left: 34px;
+			top: 0px;
+		}
+	}
+
+	.banner_zone {
+		width: 392px;
+		margin: 0 auto;
+		padding-top: 40px;
+	}
+}
+
+@media screen and (min-width:1px) and (max-width:470px) {
+	.banner_zone {
+		width: 200px;
+	}
+}

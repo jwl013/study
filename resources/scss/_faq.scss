@@ -1,0 +1,70 @@
+// faq 리스트
+.faq-box {
+
+	margin-bottom:50px;
+	border-top:2px solid #000;
+	&__list {
+		background-color:#fafafa;
+		&__tit {
+			padding:15px;
+			padding-left:30px;
+			padding-top:17px;
+			box-sizing: border-box;
+			min-height:60px;
+			position: relative;
+			font-size:16px;
+			padding-right:100px;
+			border:1px solid #e0e0e0;
+			border-top:0px;
+			padding-left:70px;
+			position: relative;
+			display: block;
+			@media screen and (min-width:1px) and (max-width:768px) {
+				padding-right:30px;
+				padding-left:60px;
+			}
+			&__sbj {
+				&:focus {
+					text-decoration: underline;
+					text-underline-position: under;
+				}
+			}
+			&:before {
+				position: absolute;
+				top:15px;
+				left:15px;
+				@include sprite($q-icon)
+			}
+			&:after {
+				position: absolute;
+				top:25px;
+				right:15px;
+				@include sprite($open-icon2)
+			}
+		}
+		&__answer {
+			display: none;
+			border:1px solid #e0e0e0;
+			border-top:0px;
+			padding:30px;
+			padding-top:25px;
+			padding-left:70px;
+			background-color:#fff;
+			position: relative;
+			&:before {
+				position: absolute;
+				top:25px;
+				left:15px;
+				@include sprite($a-icon)
+			}
+		}
+	}
+
+	&__list.on {
+		.faq-box__list__tit {
+			&:after {
+				@include sprite($open-icon);
+			}
+		}
+	}
+}

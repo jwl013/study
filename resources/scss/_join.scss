@@ -1,0 +1,375 @@
+/* 회원가입 인트로 */
+.join-wrap {
+
+	@include floatWrap;
+	margin-left:-20px;
+	&__box {
+		float: left;
+
+		&__in {
+			margin-left:20px;
+			padding-top: 60px;
+			padding-bottom: 10px;
+			min-height: 300px;
+			border: 1px solid #000;
+			border-radius: 5px;
+			text-align: center;
+
+			&__tit {
+				display:block;
+				font-size: 28px;
+				margin-bottom: 35px;
+				position: relative;
+				padding-top: 80px;;
+			}
+			&__desc {
+				margin-bottom:30px
+			}
+
+			&__go {
+				@include btn3;
+			}
+		}
+
+		&--1 {
+			width: 50%;
+
+			strong:before {
+				display:block;
+				@include sprite($join-icon-1);
+				position: absolute;
+				top: 0;
+				left:50%;
+				transform: translateX(-50%);
+			}
+		}
+		&--2 {
+			width: 50%;
+
+			strong:before {
+				display:block;
+				@include sprite($join-icon-2);
+				position: absolute;
+				top: 0;
+				left:50%;
+				transform: translateX(-50%);
+			}
+
+		}
+	}
+}
+
+
+@media screen and (min-width:1px) and (max-width:768px) {
+
+	.join-wrap {margin-left:0;}
+	.join-wrap__box {float:none;margin:0 20px;margin-bottom:10px;width:auto;}
+	.join-wrap__box__in {margin-left:0;}
+
+}
+
+/* 회원가입 스탭
+===========================*/
+
+
+/* step top */
+.join-step {
+
+	&__top {
+		margin-bottom: 50px;
+
+		&__ul {
+			@include floatWrap;
+			margin-left:-7px;
+			&__li {
+				float: left;
+				width: 33%;
+
+				&:first-child {width:34%;}
+
+				p {
+					white-space: nowrap;
+					background-color:#f7f8fc;
+					border:1px solid #d6dde7;
+					padding:10px 20px;
+					margin-left: 7px;
+					position: relative;
+					&:after {
+						position: absolute;
+						top: 50%;
+						right:15px;
+						transform: translateY(-50%);
+						@include sprite($join-step-next);
+					}
+				}
+			}
+
+			&__li.on {
+
+				p {
+					color:#fff;
+					background-color:#444444;
+					border:1px solid #444444;
+					&:after {
+						@include sprite($join-step-now);
+					}
+				}
+
+			}
+		}
+	}
+}
+
+@media screen and (min-width:769px) and (max-width:900px) {
+	.join-step__top__ul__li p {font-size:13px;}
+}
+@media screen and (min-width:1px) and (max-width:768px) {
+	.join-step__top__ul__li {display:none;}
+	.join-step__top__ul__li.on {display:block; width:100%;}
+
+}
+
+
+/* step1 */
+.join-step--1 {
+
+	&__tit {
+		margin-bottom: 20px;
+		& .label-text {
+			font-size: 16px;
+			margin-left: 5px;
+		}
+
+	}
+	&__tit.allcheck {
+		padding-bottom: 20px;
+		border-bottom:1px solid #eee;
+		margin-bottom:60px;
+	}
+
+	&__textbox {
+		height: 140px;
+		overflow: auto;
+		margin-bottom: 30px;
+		border: 1px solid #eee;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-top: 1px solid #000;
+		color:#666;
+	}
+}
+
+.join-step {
+	&__confirm {
+		background-color:#eeeeee;
+		border-top: 1px solid #000;
+		padding: 50px 30px;
+		text-align: center;
+		margin-bottom:40px;
+		width:48%;
+		margin-left:2%;
+		float:left;
+		box-sizing: border-box;
+		&__tit {
+			display: block;
+			font-size: 40px;
+			margin-bottom:20px;
+		}
+		&__desc {
+			padding-bottom:20px;
+			font-size: 16px;
+			font-weight: 600;
+			min-height: 52px;
+		}
+		&__btn {
+			@include btn1;
+			margin-left:24% !important;
+			margin-right:24% !important;
+
+			margin-top:100px !important;
+			position: relative;
+
+			&:before {
+				@include sprite($confirm);
+
+				position: absolute;
+				top: -83px;
+				left:50%;
+				transform: translateX(-50%);
+			}
+		}
+
+	}
+	&__info {
+		margin-bottom: 20px;
+		&__tit {
+			position: relative;
+			padding-left: 22px;
+			margin-bottom:10px;
+			font: {
+				size: 16px;
+				weight: 600;
+			}
+			&:before {
+				@include sprite($info-icon);
+				position: absolute;
+				left: 0;
+				top:-2px;
+			}
+		}
+
+		&__ul {
+			@include floatWrap;
+			@include basicList3;
+
+		}
+	}
+}
+
+
+.join-step__confirm-wrap {@include floatWrap;margin-left:-2%}
+
+@media screen and (min-width:1px) and (max-width:768px) {
+	.join-step__confirm__tit {font-size:28px;}
+
+
+	.join-step__confirm-wrap {margin-left:0;}
+	.join-step__confirm {
+		float:none;
+		margin-left:0;
+		width:auto;
+		margin-bottom:10px;
+	}
+}
+
+/* step2 */
+
+.serius {color:$red}
+
+.join-form {
+	margin: 0 5%;
+	margin-bottom:30px;
+	&__line {
+		border-bottom: 1px solid #d1d1d1;
+		padding: 20px 0;
+		position: relative;
+		&__tit {
+			display:block;
+			position: absolute;
+			top:50%;left:0;
+			font-size:16px;
+			transform: translateY(-50%);
+		}
+		&__in {
+			padding-left:220px;
+			&__input {
+				@include inText(50%);
+				//width:50%;
+			}
+			&__input2 {
+				@include inText(15%);
+				//width:15%;
+			}
+			&__input3 {
+				@include inText(25%);
+				//width:25%;
+			}
+			&__input4 {
+				@include inText(35%);
+				//width:35%;
+			}
+			&__selectbox {
+				@include selectBox(100px)
+			}
+			&__btn {
+				@include btn2;
+
+			}
+		}
+	}
+}
+
+.join-subs {
+	margin-bottom:30px;
+
+	&__box {
+		background-color:#f6f6f6;
+		margin-bottom: 7px;
+		font-size:15px;height:58px;line-height: 58px;
+		position: relative;
+		padding-left:20px;
+
+		&__radiobox {
+			position: absolute;
+			top:50%;
+			right:10%;
+			transform: translateY(-50%);
+
+			.in_check {margin-left:20px;}
+		}
+	}
+}
+
+.ok-btn {
+	@include btn3;
+}
+.cancel-btn {
+	@include btn4;
+}
+
+@media screen and (min-width:1px) and (max-width:768px) {
+	.join-form__line__tit {
+		position: relative;
+		top:0;
+		left:0;
+		font-size:16px;
+		transform: translateY(0);
+		margin-bottom: 5px;
+	}
+	.join-form__line__in {padding-left:0;}
+	.join-form__line__in__input {width:100%; box-sizing: border-box;}
+	.join-form__line__in__input3 {width:50%; box-sizing: border-box;}
+	.join-form__line__in__input2 {width:30%; box-sizing: border-box;}
+	.join-form__line__in__input4 {width:100%;  box-sizing: border-box;margin-bottom:5px;}
+
+	.join-form__line__in__btn {
+		margin-top:10px;
+		display:block;
+		width:auto;
+		text-align: center;
+	}
+
+	.join-subs__box {height:auto;line-height:1.6;padding-top:10px;padding-bottom:10px;}
+	.join-subs__box__radiobox {position: relative;top:0;right:0;transform: translateY(0);}
+}
+
+/* step 3 */
+.join-step__final {
+	text-align:center;
+	padding-top: 30px;
+	&__text1 {
+		position: relative;
+		padding-top: 60px;
+		font-size: 22px;
+		margin-bottom:20px;
+		span {
+			color:$red;
+		}
+		&:before {
+			@include sprite($step-final);
+			position: absolute;
+			top:0;
+			left:50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__text2 {
+		font-size: 15px;
+		color:#666;
+		margin-bottom:80px;
+		strong {
+			color:#000;
+		}
+	}
+}
+

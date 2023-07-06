@@ -1,0 +1,209 @@
+
+/*탭*/
+.js-box {display:none;position:relative;min-height: 20px;}
+.js-box.on {display:block;}
+.js-box2 {display:none;position:relative;min-height: 100px;}
+.js-box2.on {display:block;}
+
+.sub-tab { //sub-tab 디자인때문에 아래와 같이 1픽셀 밀림 수정 필요
+	.js-box {margin-left:1px;}
+	.js-box2 {margin-left:1px;}
+}
+
+
+
+/*메인탭*/
+
+.main-tab {
+	&__ul {
+		padding-left: 10px;
+		&__li {
+			float:left;
+			a {
+				height: 56px;
+				line-height: 56px;
+				display:block;
+				font-size: 17px;font-size: 1.7rem;
+				text-align: center;
+				padding-left: 10px;
+				padding-right: 10px;
+				color: #ddd;
+				opacity: 0.7;
+			}
+			&.on a{
+				color: #333;
+				font-weight: 500;
+				opacity: 1;
+			}
+			a:hover,
+			a:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__cont {
+		&__ul {
+			border: 1px solid #e0e0e0;
+			&__li {
+				border-top: 1px dotted #ccc;
+			}
+		}
+
+	}
+}
+
+
+.main-tab__cont__ul__li {border-top:1px dotted #ccc;}
+.main-tab__cont__ul__li:first-child {border-top:0;}
+.main-tab__cont__ul__li a {display:block;position: relative;padding-left:10px;padding-right: 10px;}
+.main-tab__cont__ul__li a:hover,
+.main-tab__cont__ul__li a:focus {background-color:#eee}
+
+.main-tab__cont__more {position:absolute;right:18px;top:-42px;display:block;width:26px;height:26px;padding:2px;}
+	.main-tab__cont__more:focus {border:2px solid gold;padding:0;}
+.mtcul-cont {white-space: nowrap;overflow:hidden;display: block;text-overflow: ellipsis;
+	width:70%;
+	padding-top: 10px;padding-bottom:10px;color:#000;}
+.mtcul-date {display:block;position: absolute;top:10px;right:10px;}
+
+@media screen and (min-width:1px) and (max-width:768px) {
+	.mtcul-cont {width:auto;}
+	.mtcul-date {display: none;}
+}
+
+
+/*서브탭*/
+.sub-tab {
+	overflow: hidden;
+	&__ul {
+		@include floatWrap;
+		display: flex;
+		flex-wrap: wrap;
+		border:1px solid #ddd;
+		margin-left:-1px;
+		margin-top:-1px;
+		border-radius: 7px;
+		margin-bottom:30px;
+		overflow: hidden;
+		&__li {
+
+			flex:1;
+
+			min-width: 140px;
+			a {
+				color:#333;
+				display:block;
+				border-top:1px solid #ddd;
+				border-left:1px solid #ddd;
+				text-align: center;
+				@include fontSize(16);
+				padding-top:12px;
+				padding-bottom:12px;
+				white-space: nowrap;
+				&:hover {text-decoration: underline;}
+				&:focus {background-color: #3963b9;color:#fff;
+					border-top:1px solid #3963b9;text-decoration: underline;
+					border-left:1px solid #3963b9;}
+			}
+			&.on {
+				a {
+					background-color: #2550a7;
+					color:#fff;
+					border-top:1px solid #2550a7;
+					border-left:1px solid #2550a7;
+				}
+			}
+		}
+
+	}
+}
+
+
+/*서브탭2*/
+.sub-tab2 {
+	overflow: hidden;
+
+	&__ul {
+		@include floatWrap;
+		border-top:1px solid #ddd;
+		border-left:1px solid #ddd;
+		margin-bottom:30px;
+		&__li {
+			float:left;
+			box-sizing: border-box;
+
+			@media screen and (min-width:1px) and (max-width:900px) {
+				width:25% !important;
+			}
+			@media screen and (min-width:1px) and (max-width:768px) {
+				width:33.33% !important;
+			}
+			@media screen and (min-width:1px) and (max-width:540px) {
+				width:50% !important;
+			}
+			a {
+				color:#333;
+				display:block;
+
+				border:1px solid #ddd;
+				margin-top:-1px;
+				margin-left:-1px;
+				text-align: center;
+				@include fontSize(14);
+				padding-top:10px;
+				padding-bottom:10px;
+				white-space: nowrap;
+				box-sizing: border-box;
+
+				&:hover {text-decoration: underline;}
+				&:focus {text-decoration: underline;}
+			}
+			&.on {
+				a {
+					color:#2550a7;
+					position: relative;
+					z-index: 99999;
+					font-weight: bold;
+					padding-top:9px;
+					padding-bottom:9px;
+					border:2px solid #2550a7;
+				}
+			}
+		}
+
+	}
+
+	&.menu-num-2 > ul > li {width:50%;}
+	&.menu-num-3	> ul > li {width:33.33%;}
+		*+ html &.menu-num-3	> ul > li {width:33%;}
+	&.menu-num-4	> ul > li {width:25%;}
+	&.menu-num-5	> ul > li {width:20%;}
+	&.menu-num-6	> ul > li {width:16.66%;}
+		*+ html &.menu-num-6	> ul > li {width:16.66%;}
+	&.menu-num-7	> ul > li {width:16.66%;}
+	&.menu-num-8	> ul > li {width:16.66%;}
+	&.menu-num-9	> ul > li {width:16.66%;}
+		*+ html .menu-num-9	> ul > li {width:16.66%;}
+	&.menu-num-10 > ul > li {width:16.66%;}
+	&.menu-num-11 > ul > li {width:16.66%;}
+		*+ html &.menu-num-11 > ul > li {width:16.66%;}
+	&.menu-num-12 > ul > li {width:16.66%;}
+		*+ html &.menu-num-12 > ul > li {width:16.66%;}
+
+	&.menu-num-13 > ul > li {width:16.66%;}
+
+	&.menu-num-14 > ul > li {width:16.66%;}
+	&.menu-num-15 > ul > li {width:16.66%;}
+	&.menu-num-16 > ul > li {width:16.66%;}
+	&.menu-num-17 > ul > li {width:16.66%;}
+	&.menu-num-18 > ul > li {width:16.66%;}
+	&.menu-num-19 > ul > li {width:16.66%;}
+	&.menu-num-20 > ul > li {width:16.66%;}
+	&.menu-num-21 > ul > li {width:16.66%;}
+	&.menu-num-22 > ul > li {width:16.66%;}
+	&.menu-num-23 > ul > li {width:16.66%;}
+	&.menu-num-24 > ul > li {width:16.66%;}
+	&.menu-num-25 > ul > li {width:16.66%;}
+
+}
